@@ -152,14 +152,14 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
 \subsection{Claim 1} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
 \begin{align}
     \rascalNumber{n}{k}{i}          &= \binom{n}{k}, \quad 0 \leq k \leq i \\
-    \rascalNumber{n}{i-j}{i}        &= \binom{n}{i-j} \\
-    \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j} \\
+    \rascalNumber{n}{i-j}{i}        &= \binom{n}{i-j}, \quad ColumnIdentity1 \\
+    \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j}, \quad ColumnIdentity2 \\
 \end{align}
 
 \subsection{Claim 2} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row
 \begin{align}
     \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1 \\
-    \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \\
+    \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \quad RowIdentity1 \\
     \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k}
 \end{align}
 By symmetry

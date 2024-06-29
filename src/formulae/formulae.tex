@@ -160,7 +160,8 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
 \begin{align}
     \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1 \\
     \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \quad RowIdentity1 \\
-    \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k}
+    \rascalNumber{(2i+1)-j}{k}{(2i+1)-i-1}  &= \binom{(2i+1)-j}{k} \\
+    \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k} \quad t \geq 2i+1 \quad RowIdentity2
 \end{align}
 By symmetry
 \begin{align*}
@@ -168,7 +169,7 @@ By symmetry
 \end{align*}
 For $k=t$
 \begin{align*}
-    \rascalNumber{2i+1-t}{t}{i} &= \binom{2i+1-t}{k} \\
+    \rascalNumber{2i+1-t}{t}{i} &= \binom{2i+1-t}{t} \\
     \rascalNumber{2i+1-t}{2i+1-2t}{i} &= \binom{2i+1-t}{2i+1-2t}
 \end{align*}
 

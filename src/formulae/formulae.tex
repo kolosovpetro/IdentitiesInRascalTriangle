@@ -148,15 +148,15 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
 
 
 \section{Formulae}\label{sec:formulae}
-Claim 1
+\subsection{Claim 1}
 \begin{equation}
     \rascalNumber{n}{k}{i} = \binom{n}{k}, \quad 0 \leq k \leq i
 \end{equation}
-Claim 2
+\subsection{Claim 2}
 \begin{equation}
     \rascalNumber{n}{k}{i} = \binom{n}{k}, \quad 0 \leq n \leq 2i+1
 \end{equation}
-Claim 3
+\subsection{Claim 3}
 \begin{equation}
     \binom{j}{k} - \rascalNumber{j}{k}{i} = \binom{n}{i+1}, \quad j \geq 2i+2, k=i+1
 \end{equation}
@@ -172,6 +172,13 @@ Claim 3
 \begin{equation}
     \binom{2t +j}{t} - \rascalNumber{2t +j}{t}{t-1} = \binom{t+j}{t}
 \end{equation}
+
+\subsection{Claim 4}
+\begin{align*}
+    \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
+    \binom{2(i+2)-1+j}{i+2} - \rascalNumber{2(i+2)-1+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
+    \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t} \\
+\end{align*}
 
 
 

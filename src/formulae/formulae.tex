@@ -113,9 +113,10 @@
 
 \section{Definitions}
 Definition of generalized Rascal triangle
-\begin{equation}
-    \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
-\end{equation}
+\begin{align}
+    \rascalNumber{n}{k}{i} &= \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m} \\
+    &= \binom{n-k}{0} \binom{k}{0} + \binom{n-k}{1} \binom{k}{1} + \binom{n-k}{2} \binom{k}{2} + \ldots + \binom{n-k}{i} \binom{k}{i}
+\end{align}
 Definition of $(1, q)$-Pascal triangle
 \begin{equation*}
     \oneQBinomial{n}{k}{q} =
@@ -128,7 +129,7 @@ Definition of $(1, q)$-Pascal triangle
 \end{equation*}
 Pascals triangle as polynomial
 \begin{equation}
-    \binom{n}{k} = \prod_{i=1}^{k} \frac{n-i+1}{i}
+    \binom{n}{k}= \frac{\fallingFactorial{n}{k}}{k!}= \frac{1}{k!} n(n-1)(n-2)\cdots (n-(k-1)) = \prod_{i=1}^{k} \frac{n-i+1}{i}
 \end{equation}
 
 
@@ -162,15 +163,17 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
 
 \subsection{Claim 2} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row
 \begin{align}
-    \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1 \\
-    \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \quad RowIdentity1 \\
-    \rascalNumber{(2i+1)-j}{k}{(2i+1)-i-1}  &= \binom{(2i+1)-j}{k} \\
-    \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k} \quad t \geq 2i+1 \quad RowIdentity2
+    \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1
 \end{align}
-%By symmetry
-%\begin{align*}
-%    \rascalNumber{2i+1-j}{2i+1-j-k}{i} = \binom{2i+1-j}{2i+1-j-k}
-%\end{align*}
+For every fixed $i \geq 0$
+\begin{align}
+    \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \quad RowIdentity1 \\
+    \rascalNumber{(2i+1)-j}{k}{(2i+1)-i-1}  &= \binom{(2i+1)-j}{k}
+\end{align}
+For every fixed $i \geq 0$ and $t \geq 2i+1$
+\begin{align}
+    \rascalNumber{t-j}{k}{t-i-1}            = \binom{t-j}{k} \quad RowIdentity2
+\end{align}
 For $k=j$
 \begin{align*}
     \rascalNumber{2i+1-j}{j}{i}         &= \binom{2i+1-j}{j}, \quad 0 \leq j \leq i \quad RowIdentity3 \\
@@ -179,7 +182,9 @@ For $k=j$
     \rascalNumber{t-j}{t-2j}{t-i-1}     &= \binom{t-j}{t-2j}, \quad t \geq 2i+1, \quad 0 \leq j \leq t-i-1, \quad RowIdentity4 \\
 \end{align*}
 
-\subsection{Claim 3} Row-column difference identity
+\subsection{Claim 3} Row-column difference identity.
+Proof via Vandermonde's identity.
+For every fixed $i \geq 1$
 \begin{align*}
     \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} &= \binom{n+i}{i} \quad RowColumnDifferenceIdentity1 \\
     \binom{n+2i}{n+i} - \rascalNumber{n+2i}{n+i}{i-1} &= \binom{n+i}{n} \\

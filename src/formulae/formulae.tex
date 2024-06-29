@@ -163,34 +163,27 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
     \rascalNumber{(2i+1)-j}{k}{(2i+1)-i-1}  &= \binom{(2i+1)-j}{k} \\
     \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k} \quad t \geq 2i+1 \quad RowIdentity2
 \end{align}
-By symmetry
+%By symmetry
+%\begin{align*}
+%    \rascalNumber{2i+1-j}{2i+1-j-k}{i} = \binom{2i+1-j}{2i+1-j-k}
+%\end{align*}
+For $k=j$
 \begin{align*}
-    \rascalNumber{2i+1-t}{2i+1-t-k}{i} = \binom{2i+1-t}{2i+1-t-k}
+    \rascalNumber{2i+1-j}{j}{i}         &= \binom{2i+1-j}{j}, \quad 0 \leq j \leq i \quad RowIdentity3 \\
+    \rascalNumber{2i+1-j}{2i+1-2j}{i}   &= \binom{2i+1-j}{2i+1-2j} \\
+    \rascalNumber{(2i+1)-j}{(2i+1)-2j}{(2i+1)-i-1}   &= \binom{(2i+1)-j}{(2i+1)-2j} \\
+    \rascalNumber{t-j}{t-2j}{t-i-1}     &= \binom{t-j}{t-2j}, \quad t \geq 2i+1, \quad 0 \leq j \leq t-i-1, \quad RowIdentity4 \\
 \end{align*}
-For $k=t$
+
+\subsection{Claim 3} Row-column difference identity
 \begin{align*}
-    \rascalNumber{2i+1-t}{t}{i} &= \binom{2i+1-t}{t} \\
-    \rascalNumber{2i+1-t}{2i+1-2t}{i} &= \binom{2i+1-t}{2i+1-2t}
+    \binom{j}{k} - \rascalNumber{j}{k}{i}                               &= \binom{n}{i+1}, \quad j \geq 2i+2, k=i+1 \\
+    \binom{2i+2+j}{i+1} - \rascalNumber{2i+2+j}{i+1}{i}                 &= \binom{i+1+j}{i+1} \\
+    \binom{2(i+1) +j}{i+1} - \rascalNumber{2(i+1) +j}{i+1}{(i+1)-1}     &= \binom{(i+1)+j}{i+1} \\
+    \binom{2t +j}{t} - \rascalNumber{2t +j}{t}{t-1}                     &= \binom{t+j}{t}, \quad t \geq i+1 \\
 \end{align*}
 
-\subsection{Claim 3}
-\begin{equation}
-    \binom{j}{k} - \rascalNumber{j}{k}{i} = \binom{n}{i+1}, \quad j \geq 2i+2, k=i+1
-\end{equation}
-
-\begin{equation}
-    \binom{2i+j+2}{i+1} - \rascalNumber{2i+j+2}{i+1}{i} = \binom{i+j+1}{i+1}
-\end{equation}
-
-\begin{equation}
-    \binom{2(i+1) +j}{i+1} - \rascalNumber{2(i+1) +j}{i+1}{i} = \binom{(i+1)+j}{i+1}
-\end{equation}
-
-\begin{equation}
-    \binom{2t +j}{t} - \rascalNumber{2t +j}{t}{t-1} = \binom{t+j}{t}
-\end{equation}
-
-\subsection{Claim 4}
+\subsection{Claim 4} Relation between $(1,q)$-Pascal's triangle
 \begin{align*}
     \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
     \binom{2(i+2)-1+j}{i+2} - \rascalNumber{2(i+2)-1+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\

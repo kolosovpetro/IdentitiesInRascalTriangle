@@ -177,17 +177,17 @@ For $k=j$
 
 \subsection{Claim 3} Row-column difference identity
 \begin{align*}
-    \binom{j}{k} - \rascalNumber{j}{k}{i}                               &= \binom{n}{i+1}, \quad j \geq 2i+2, k=i+1 \\
-    \binom{2i+2+j}{i+1} - \rascalNumber{2i+2+j}{i+1}{i}                 &= \binom{i+1+j}{i+1} \\
-    \binom{2(i+1) +j}{i+1} - \rascalNumber{2(i+1) +j}{i+1}{(i+1)-1}     &= \binom{(i+1)+j}{i+1} \\
-    \binom{2t +j}{t} - \rascalNumber{2t +j}{t}{t-1}                     &= \binom{t+j}{t}, \quad t \geq i+1 \\
+    \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} &= \binom{n+i}{i} \quad RowColumnDifferenceIdentity1 \\
+    \binom{n+2i}{n+i} - \rascalNumber{n+2i}{n+i}{i-1} &= \binom{n+i}{n} \\
+    \binom{(n+i)+i}{(n+i)} - \rascalNumber{(n+i)+i}{(n+i)}{i-1} &= \binom{(n+i)}{(n+i)-i} \\
+    \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} &= \binom{j}{j-i}, \quad RowColumnDifferenceIdentity2 \\
 \end{align*}
 
 \subsection{Claim 4} Relation between $(1,q)$-Pascal's triangle
 \begin{align*}
-    \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
+    \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2}, \quad OneQPascalIdentity1 \\
     \binom{2(i+2)-1+j}{i+2} - \rascalNumber{2(i+2)-1+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
-    \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t} \\
+    \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t}, \quad OneQPascalIdentity2 \\
 \end{align*}
 
 

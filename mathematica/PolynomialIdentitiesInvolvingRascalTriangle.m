@@ -10,6 +10,10 @@ RowIdentity1::usage="Validates row identity \\rascalNumber{2i+1-j}{k}{i}        
 RowIdentity2::usage="Validates row identity \\rascalNumber{t-j}{k}{t-i-1}            &= \\binom{t-j}{k}"
 RowIdentity3::usage="Validates row identity \\rascalNumber{2i+1-j}{j}{i}         &= \\binom{2i+1-j}{j}"
 RowIdentity4::usage="Validates row identity \\rascalNumber{t-j}{t-2j}{t-i-1}     &= \\binom{t-j}{t-2j}, \\quad t \\geq 2i+1"
+RowColumnDifferenceIdentity1::usage="Validates row identity \\binom{2i+2+j}{i+1} - \\rascalNumber{2i+2+j}{i+1}{i} &= \\binom{i+1+j}{i+1} \\\\"
+RowColumnDifferenceIdentity2::usage="Validates row identity \\binom{j+i}{j} - \\rascalNumber{j+i}{j}{i-1} &= \\binom{j}{j-i}"
+OneQPascalIdentity1::usage="Validates row identity \\binom{2i+3+j}{i+2} - \\rascalNumber{2i+3+j}{i+2}{i} &= \\oneQBinomial{i+2+j}{i+2}{i+2}"
+OneQPascalIdentity2::usage="Validates row identity \\binom{2t-1+j}{t} - \\rascalNumber{2t-1+j}{t}{t-2} &= \\oneQBinomial{t+j}{t}{t}"
 
 Begin["`Private`"]
 
@@ -30,16 +34,14 @@ RowIdentity1[i_]:= Column[Table[RascalNumber[2i+1-j, k, i]== Binomial[2i+1-j, k]
 RowIdentity2[t_, i_]:= Column[Table[RascalNumber[t-j, k, t-i-1]== Binomial[t-j, k], {j, 0, t}, {k, 0, t-j}]];
 RowIdentity3[i_]:= Column[Table[RascalNumber[2i+1-j, j, i]== Binomial[2i+1-j, j], {j, 0, i}]];
 RowIdentity4[t_, i_]:= Column[Table[RascalNumber[t-j, t-2j, t-i-1]== Binomial[t-j, t-2j], {j, 0, t-i-1}]];
+RowColumnDifferenceIdentity1[i_, rowNumber_]:= Column[Table[Binomial[n+2i, i] - RascalNumber[n+2i, i, i-1]== Binomial[n+i, i], {n, 0, rowNumber}]];
+RowColumnDifferenceIdentity2[i_, rowNumber_]:= Column[Table[Binomial[j+i, j] - RascalNumber[j+i, j, i-1]== Binomial[j, j-i], {j, 0, rowNumber}]];
+OneQPascalIdentity1[i_, rowNumber_]:= Column[Table[Binomial[2i+3+j, i+2] - RascalNumber[2i+3+j, i+2, i]== OneQBinomial[i+2+j, i+2, i+2], {j, 0, rowNumber}]];
+OneQPascalIdentity2[i_, rowNumber_]:= Column[Table[Binomial[2i-1+j, i] - RascalNumber[2i-1+j, i, i-2]== OneQBinomial[i+j, i, i], {j, 0, rowNumber}]];
 
 End[ ]
 
 EndPackage[ ]
-
-
-
-
-
-
 
 
 

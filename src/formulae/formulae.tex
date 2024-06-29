@@ -136,26 +136,42 @@ Definition of $(1, q)$-Pascal triangle
     \east  &= \rascalNumber{n-1}{k}{i}
 \end{align*}
 Identity see Hotchkiss
-\begin{align*}
+\begin{align}
     \south                  &= \frac{\east \cdot \west + 1}{\north} \\
     \rascalNumber{n}{k}{i}  &= \frac{\rascalNumber{n-1}{k}{i} \rascalNumber{n-1}{k-1}{i} +1}{\rascalNumber{n-2}{k-1}{i}}
-\end{align*}
+\end{align}
 Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
-\begin{align*}
+\begin{align}
     \south                 &= \east + \west - \north  + 1 \\
     \rascalNumber{n}{k}{i} &= \rascalNumber{n-1}{k}{i} + \rascalNumber{n-1}{k-1}{i} - \rascalNumber{n-2}{k-1}{i} + 1
-\end{align*}
+\end{align}
 
 
 \section{Formulae}\label{sec:formulae}
+
 \subsection{Claim 1} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
-\begin{equation}
-    \rascalNumber{n}{k}{i} = \binom{n}{k}, \quad 0 \leq k \leq i
-\end{equation}
+\begin{align}
+    \rascalNumber{n}{k}{i}          &= \binom{n}{k}, \quad 0 \leq k \leq i \\
+    \rascalNumber{n}{i-j}{i}        &= \binom{n}{i-j} \\
+    \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j} \\
+\end{align}
+
 \subsection{Claim 2} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row
-\begin{equation}
-    \rascalNumber{n}{k}{i} = \binom{n}{k}, \quad 0 \leq n \leq 2i+1
-\end{equation}
+\begin{align}
+    \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1 \\
+    \rascalNumber{2i+1-j}{k}{i}             &= \binom{2i+1-j}{k} \\
+    \rascalNumber{t-j}{k}{t-i-1}            &= \binom{t-j}{k}
+\end{align}
+By symmetry
+\begin{align*}
+    \rascalNumber{2i+1-t}{2i+1-t-k}{i} = \binom{2i+1-t}{2i+1-t-k}
+\end{align*}
+For $k=t$
+\begin{align*}
+    \rascalNumber{2i+1-t}{t}{i} &= \binom{2i+1-t}{k} \\
+    \rascalNumber{2i+1-t}{2i+1-2t}{i} &= \binom{2i+1-t}{2i+1-2t}
+\end{align*}
+
 \subsection{Claim 3}
 \begin{equation}
     \binom{j}{k} - \rascalNumber{j}{k}{i} = \binom{n}{i+1}, \quad j \geq 2i+2, k=i+1

@@ -154,6 +154,12 @@ Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
 
 \section{Formulae}\label{sec:formulae}
 
+\subsection{Claim 0} Generalized rascal triangle is partial case of Chu-Vandermonde convolution
+
+\begin{equation*}
+    \binom{m+n}{r} = \sum_{k=0}^{r} \binom{m}{k} \binom{n}{r-k}
+\end{equation*}
+
 \subsection{Claim 1} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
 \begin{align}
     \rascalNumber{n}{k}{i}          &= \binom{n}{k}, \quad 0 \leq k \leq i \\
@@ -180,6 +186,13 @@ For $k=j$
     \rascalNumber{2i+1-j}{2i+1-2j}{i}   &= \binom{2i+1-j}{2i+1-2j} \\
     \rascalNumber{(2i+1)-j}{(2i+1)-2j}{(2i+1)-i-1}   &= \binom{(2i+1)-j}{(2i+1)-2j} \\
     \rascalNumber{t-j}{t-2j}{t-i-1}     &= \binom{t-j}{t-2j}, \quad t \geq 2i+1, \quad 0 \leq j \leq t-i-1, \quad RowIdentity4 \\
+\end{align*}
+
+\textbf{Proof}.
+
+\begin{align*}
+    \rascalNumber{2i+1-j}{k}{i} &= \binom{2i+1-j}{k} \\
+    \rascalNumber{2i+1-j}{k}{i} &= \sum_{m=0}^{i} \binom{2i+1-j-k}{m} \binom{k}{m} = \binom{2i+1-j}{k}
 \end{align*}
 
 \subsection{Claim 3} Row-column difference identity.

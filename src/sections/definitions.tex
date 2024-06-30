@@ -1,0 +1,19 @@
+﻿\begin{definition}
+    Generalized rascal number
+    \begin{align}
+        \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
+    \end{align}
+\end{definition}
+
+\begin{definition}
+    $(1,q)$-Binomial coefficient
+    \begin{equation}
+        \oneQBinomial{n}{k}{q} =
+        \begin{cases}
+            q & \mathrm{if} \; k=0, n=0 \\
+            1 & \mathrm{if} \; k=0 \\
+            0 & \mathrm{if} \; k > n \\
+            \oneQBinomial{n-1}{k}{q} + \oneQBinomial{n-1}{k-1}{q}
+        \end{cases}\label{eq:qbinomial-definition}
+    \end{equation}
+\end{definition}

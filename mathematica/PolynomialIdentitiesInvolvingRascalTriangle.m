@@ -15,6 +15,7 @@ RowColumnDifferenceIdentity2::usage="Validates row identity \\binom{j+i}{j} - \\
 OneQPascalIdentity1::usage="Validates row identity \\binom{2i+3+j}{i+2} - \\rascalNumber{2i+3+j}{i+2}{i} &= \\oneQBinomial{i+2+j}{i+2}{i+2}"
 OneQPascalIdentity2::usage="Validates row identity \\binom{2t-1+j}{t} - \\rascalNumber{2t-1+j}{t}{t-2} &= \\oneQBinomial{t+j}{t}{t}"
 BinomialCoefficientAsPolynomial::usage="Gives binomial coefficient in form of polynomial"
+BinomialRascalDifferenceColumn::usage="Gives Binomial minus rascal column for i, k"
 
 Begin["`Private`"]
 
@@ -40,6 +41,7 @@ RowColumnDifferenceIdentity2[i_, rowNumber_]:= Column[Table[Binomial[j+i, j] - R
 OneQPascalIdentity1[i_, rowNumber_]:= Column[Table[Binomial[2i+3+j, i+2] - RascalNumber[2i+3+j, i+2, i]== OneQBinomial[i+2+j, i+2, i+2], {j, 0, rowNumber}]];
 OneQPascalIdentity2[i_, rowNumber_]:= Column[Table[Binomial[2i-1+j, i] - RascalNumber[2i-1+j, i, i-2]== OneQBinomial[i+j, i, i], {j, 0, rowNumber}]];
 BinomialCoefficientAsPolynomial[n_, k_]:= Product[(n-i+1)/i, {i, 1, k}];
+BinomialRascalDifferenceColumn[i_, k_, size_] := Table[Binomial[n,k]-RascalNumber[n,k, i],{n, 2i+1, 2i+1 + size}];
 
 End[ ]
 

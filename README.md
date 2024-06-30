@@ -1,1 +1,1 @@
-# Polynomial identities involving Rascal Triangle
+# Identities in Rascal Triangle

@@ -6,6 +6,12 @@
 \newblock {\em {The College Mathematics Journal}}, 41(5):393--395, 2010.
 \newblock \url {https://doi.org/10.4169/074683410X521991}.
 
+\bibitem{sloane1994pascal}
+{Sloane, N. J. A.}
+\newblock {Pascal's triangle read by rows. Entry A007318 in The On-Line
+  Encyclopedia of Integer Sequences}, 1994.
+\newblock \url {https://oeis.org/A007318}.
+
 \bibitem{sloane2002rascal}
 {Sloane, N. J. A.}
 \newblock {The Rascal triangle read by rows. Entry A077028 in The On-Line

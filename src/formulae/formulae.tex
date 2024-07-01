@@ -108,6 +108,8 @@
     Abstract
 \end{abstract}
 
+\tableofcontents
+
 \maketitle
 
 
@@ -132,42 +134,22 @@ Pascals triangle as polynomial
     \binom{n}{k}= \frac{\fallingFactorial{n}{k}}{k!}= \frac{1}{k!} n(n-1)(n-2)\cdots (n-(k-1)) = \prod_{i=1}^{k} \frac{n-i+1}{i}
 \end{equation}
 
-
-\section{Sides of world}
-\begin{align*}
-    \north &= \rascalNumber{n-2}{k-1}{i} \\
-    \south &= \rascalNumber{n}{k}{i} \\
-    \west  &= \rascalNumber{n-1}{k-1}{i} \\
-    \east  &= \rascalNumber{n-1}{k}{i}
-\end{align*}
-Identity see Hotchkiss
-\begin{align}
-    \south                  &= \frac{\east \cdot \west + 1}{\north} \\
-    \rascalNumber{n}{k}{i}  &= \frac{\rascalNumber{n-1}{k}{i} \rascalNumber{n-1}{k-1}{i} +1}{\rascalNumber{n-2}{k-1}{i}}
-\end{align}
-Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
-\begin{align}
-    \south                 &= \east + \west - \north  + 1 \\
-    \rascalNumber{n}{k}{i} &= \rascalNumber{n-1}{k}{i} + \rascalNumber{n-1}{k-1}{i} - \rascalNumber{n-2}{k-1}{i} + 1
-\end{align}
-
-
 \section{Formulae}\label{sec:formulae}
 
-\subsection{Claim 0} Generalized rascal triangle is partial case of Chu-Vandermonde convolution
+\subsection{Claim 0. Vandermonde convolution} Generalized rascal triangle is partial case of Chu-Vandermonde convolution
 
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
 \end{equation*}
 
-\subsection{Claim 1} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
+\subsection{Claim 1. I-th column identity} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
 \begin{align}
     \rascalNumber{n}{k}{i}          &= \binom{n}{k}, \quad 0 \leq k \leq i \\
     \rascalNumber{n}{i-j}{i}        &= \binom{n}{i-j}, \quad ColumnIdentity1 \\
     \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j}, \quad ColumnIdentity2 \\
 \end{align}
 
-\subsection{Claim 2} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row
+\subsection{Claim 2. 2i+1 row identity} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row
 \begin{align}
     \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1
 \end{align}
@@ -188,18 +170,74 @@ For $k=j$
     \rascalNumber{t-j}{t-2j}{t-i-1}     &= \binom{t-j}{t-2j}, \quad t \geq 2i+1, \quad 0 \leq j \leq t-i-1, \quad RowIdentity4 \\
 \end{align*}
 
-\textbf{Proof}.
+\subsection{Proof of 2i+1 row identity}
+Let be definition of rascal number
+\begin{equation*}
+    \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m}
+\end{equation*}
+Then for every $0 \leq n \leq 2i+1$ holds
+\begin{align}
+    \rascalNumber{n}{k}{i}                  &= \binom{n}{k}, \quad 0 \leq n \leq 2i+1
+\end{align}
+Let be Vandermonde formula
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
 \end{equation*}
-
+By Vandermonde formula
+\begin{equation*}
+    \binom{n}{k} = \sum_{m=0}^{k} \binom{n-k}{m} \binom{k}{k-m}
+\end{equation*}
+Then for every $0 \leq n \leq 2i+1$ and $0 \leq k \leq 2i+1-n$
 \begin{align*}
-    \rascalNumber{2i+1-j}{k}{i} &= \binom{2i+1-j}{k} \\
-    \rascalNumber{2i+1-j}{k}{i} &= \sum_{m=0}^{i} \binom{2i+1-j-k}{m} \binom{k}{m} = \binom{2i+1-j}{k} \\
-    \binom{2i+1-j}{k}           &= \sum_{m=0}^{i} \binom{2i+1-j-k}{m} \binom{k}{m}  \\
-    \binom{2i}{k}               &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}  \\
+    \rascalNumber{2i+1-n}{k}{i} = \binom{2i+1-n}{k}
+%    \rascalNumber{2i+1-j}{k}{i} &= \sum_{m=0}^{i} \binom{2i+1-j-k}{m} \binom{k}{m} = \binom{2i+1-j}{k} \\
+%    \binom{2i+1-j}{k}           &= \sum_{m=0}^{i} \binom{2i+1-j-k}{m} \binom{k}{m}  \\
+%    \binom{2i}{k}               &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}  \\
 \end{align*}
-
+Thus we have to prove that
+\begin{align*}
+%    \rascalNumber{2i+1-n}{k}{i} &= \binom{2i+1-n}{k} \\
+    \rascalNumber{2i+1-n}{k}{i} &= \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} = \binom{2i+1-n}{k} \\
+    \binom{2i+1-n}{k}           &= \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} = \sum_{m=0}^{k} \binom{2i+1-n-k}{m} \binom{k}{k-m}
+%    \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} &= \binom{2i+1-n-k}{0} \binom{k}{0} + \binom{2i+1-n-k}{1} \binom{k}{1} + \binom{2i+1-n-k}{2} \binom{k}{2} \\
+%    \binom{2i}{k}               &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}  \\
+\end{align*}
+Rewrite explicitly gives for $i$
+\begin{align*}
+    \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} &= \binom{2i+1-n-k}{0} \binom{k}{0} + \binom{2i+1-n-k}{1} \binom{k}{1} \\
+                                                    &+ \binom{2i+1-n-k}{2} \binom{k}{2} + \binom{2i+1-n-k}{3} \binom{k}{3} \\
+                                                    &+ \cdots + \binom{2i+1-n-k}{i} \binom{k}{i}
+\end{align*}
+Rewrite explicitly gives for $k$
+\begin{align*}
+    \sum_{m=0}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} &= \binom{2i+1-n-k}{0} \binom{k}{0} + \binom{2i+1-n-k}{1} \binom{k}{1} \\
+    &+ \binom{2i+1-n-k}{2} \binom{k}{2} + \binom{2i+1-n-k}{3} \binom{k}{3} \\
+    &+ \cdots + \binom{2i+1-n-k}{k} \binom{k}{k}
+\end{align*}
+We have three cases in general $k < i$, $k=i$, $k > i$, so we have to prove that
+\begin{equation*}
+    \sum_{m=0}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} - \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
+\end{equation*}
+For the case $k < i$ proof in Jenna et all paper.
+For the case $k=i$ proof is trivial.
+Thus,
+\begin{equation*}
+    \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
+\end{equation*}
+Considering the constraints,
+\begin{equation*}
+    \begin{cases}
+        n \geq 0 \\
+        k \geq i+1 \\
+        2i+1-n-k \leq i-n \\
+        m \geq i+1
+    \end{cases}
+\end{equation*}
+Thus,
+\begin{equation*}
+    \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
+\end{equation*}
+because binomial coefficients $\binom{i-n-s}{i+1+s}$ are zero for each $i, n, s \geq 0$.
 \subsection{Claim 3} Row-column difference identity.
 Proof via Vandermonde's identity.
 For every fixed $i \geq 1$
@@ -216,6 +254,24 @@ For every fixed $i \geq 1$
     \binom{2(i+2)-1+j}{i+2} - \rascalNumber{2(i+2)-1+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
     \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t}, \quad OneQPascalIdentity2 \\
 \end{align*}
+
+\section{Sides of world}
+\begin{align*}
+    \north &= \rascalNumber{n-2}{k-1}{i} \\
+    \south &= \rascalNumber{n}{k}{i} \\
+    \west  &= \rascalNumber{n-1}{k-1}{i} \\
+    \east  &= \rascalNumber{n-1}{k}{i}
+\end{align*}
+Identity see Hotchkiss
+\begin{align}
+    \south                  &= \frac{\east \cdot \west + 1}{\north} \\
+    \rascalNumber{n}{k}{i}  &= \frac{\rascalNumber{n-1}{k}{i} \rascalNumber{n-1}{k-1}{i} +1}{\rascalNumber{n-2}{k-1}{i}}
+\end{align}
+Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
+\begin{align}
+    \south                 &= \east + \west - \north  + 1 \\
+    \rascalNumber{n}{k}{i} &= \rascalNumber{n-1}{k}{i} + \rascalNumber{n-1}{k-1}{i} - \rascalNumber{n-2}{k-1}{i} + 1
+\end{align}
 
 
 

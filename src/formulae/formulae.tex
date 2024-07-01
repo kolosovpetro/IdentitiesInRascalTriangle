@@ -137,17 +137,21 @@ Pascals triangle as polynomial
 
 \section{Formulae}\label{sec:formulae}
 
-\subsection{Claim 0. Vandermonde convolution} Generalized rascal triangle is partial case of Chu-Vandermonde convolution
-
+\subsection{Claim 0. Vandermonde convolution} Generalized rascal number is partial case of Vandermonde convolution
+Consider Vandermonde convolution
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
+\end{equation*}
+Then generalized rascal number is partial case of Vandermonde convolution with upper summation bound equals $i$
+\begin{equation*}
+    \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m}
 \end{equation*}
 
 \subsection{Claim 1. I-th column identity} Generalized rascal triangle equals to Pascal's triangle up to $i$-th column
 \begin{align}
     \rascalNumber{n}{k}{i}          &= \binom{n}{k}, \quad 0 \leq k \leq i \\
     \rascalNumber{n}{i-j}{i}        &= \binom{n}{i-j}, \quad ColumnIdentity1 \\
-    \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j}, \quad ColumnIdentity2 \\
+    \rascalNumber{n}{n-i+j}{i}      &= \binom{n}{n-i+j}, \quad ColumnIdentity2
 \end{align}
 
 \subsection{Claim 2. 2i+1 row identity} Generalized rascal triangle equals to Pascal's triangle up to $2i+1$-th row

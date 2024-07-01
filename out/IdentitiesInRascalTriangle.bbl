@@ -36,4 +36,16 @@ Amelia Gibbs and Brian~K. Miceli.
   Encyclopedia of Integer Sequences}, 2009.
 \newblock \url {https://oeis.org/A000332}.
 
+\bibitem{sloane2004sixth}
+{Sloane, N. J. A.}
+\newblock {Sixth column of (1,5)-Pascal triangle. Entry A096943 in The On-Line
+  Encyclopedia of Integer Sequences}, 2004.
+\newblock \url {https://oeis.org/A096943}.
+
+\bibitem{sloane2004pascal}
+{Sloane, N. J. A.}
+\newblock {Pascal (1,5) triangle. Entry A096940 in The On-Line Encyclopedia of
+  Integer Sequences}, 2004.
+\newblock \url {https://oeis.org/A096940}.
+
 \end{thebibliography}

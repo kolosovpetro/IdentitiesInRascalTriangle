@@ -6,7 +6,8 @@ Define the iterated rascal number
         \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
     \end{align}
 \end{definition}
-First important thing is to notice that iterated rascal number is a partial case of Vandermonde convolution.
+First important thing is to notice that iterated rascal number
+is a partial case of Vandermonde convolution~\cite{andrews1999special}.
 Consider Vandermonde convolution
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
@@ -55,19 +56,6 @@ Taking $t \geq 2i+1$ for every fixed $i \geq 0$
 \begin{align*}
     \rascalNumber{t-n}{k}{t-i-1}= \binom{t-n}{k}
 \end{align*}
-Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
-\begin{equation*}
-    \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
-\end{equation*}
-%Let be $k=n$ and $0 \leq n \leq i$ hence the identity for iterated rascal number yieds
-%\begin{align*}
-%    \rascalNumber{2i+1-n}{n}{i}         &= \binom{2i+1-n}{n}
-%\end{align*}
-%By symmetry $\rascalNumber{2i+1-n}{2i+1-2n}{i} = \binom{2i+1-n}{2i+1-2n}$
-%for each $t \geq 2i+1, \; 0 \leq n \leq t-i-1$ follows
-%\begin{align*}
-%    \rascalNumber{t-n}{t-2n}{t-i-1}     &= \binom{t-n}{t-2n}
-%\end{align*}
 \begin{proof}
     Proof of proposition~\eqref{prop:odd-row-proposition}.
     We have three possible relations between $i,k$: $k<i$, $k=i$, $k > i$.
@@ -97,13 +85,26 @@ Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
     is indeed equals zero because binomial coefficients $\binom{i-n-s}{i+1+s}$ are zero for each $i, n, s \geq 0$.
     Therefore, the proposition~\eqref{prop:odd-row-proposition} is true.
 \end{proof}
-Considering the table of differences of binomial coefficients and iterated rascal numbers
+Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
+\begin{proposition} (Vandermonde-like identity.)
+    \label{prop:vandermonde-like-identity}
+    \begin{equation*}
+        \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
+    \end{equation*}
+\end{proposition}
+In particular, given $n=0$ proposition~\eqref{prop:vandermonde-like-identity} yields
+\begin{equation*}
+    \binom{2i+1}{k} = \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m}
+\end{equation*}
+
+Now, let's smoothly switch our focus to finite differences of binomial coefficients and iterated rascal numbers.
+Considering the table of differences $\binom{n}{k}-\rascalNumber{n}{k}{3}$
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../img/01_Difference_Binomial_Rascal_i_3_BinomialCoefficients}
     ~\caption{Difference $\binom{n}{k}-\rascalNumber{n}{k}{3}$.
     Highlighted column is $\binom{n}{4}$.
-    Sequence \href{https://oeis.org/A000332}{\texttt{A000332}} in OEIS~\cite{sloane2009binomial}.}
+    Sequence \href{https://oeis.org/A000332}{\texttt{A000332}} in the OEIS~\cite{sloane2009binomial}.}
     \label{fig:difference-binomial-rascal-i-3}
 \end{figure}
 We can spot that having $i=3$ the $k=4$-th column gives binomial coefficient $\binom{n}{4}$.

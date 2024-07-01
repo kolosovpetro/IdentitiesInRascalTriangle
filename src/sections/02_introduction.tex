@@ -1,1 +1,26 @@
+In 2010, three middle school students, Alif Anggoro, Eddy Liu, and Angus Tulloch~\cite{anggoro2010rascal},
+were challenged to provide the next row for the number triangle shown below:
+\[
+    \begin{array}{cccccccc}
+        &   &   &   & 1 &   &   &   \\
+        &   &   & 1 &   & 1 &   &   \\
+        &   & 1 &   & 2 &   & 1 &   \\
+        & 1 &   & 3 &   & 3 &   & 1 \\
+    \end{array}
+\]
+
+While the expected answer was ``1 4 6 4 1'' Anggoro, Liu, and Tulloch suggested ``1 4 5 4 1'' instead.
+They devised this new row via so-called diamond formula:
+\begin{align*}
+    \south  = \frac{\east \cdot \west + 1}{\north}
+\end{align*}
+
+So that upcoming rows of the triangle are
 \input{figures/01_rascal_triangle_i_1}
+
+Since then, a lot of work has been done over the topic of rascal triangles.
+Numerous identities and relations have been revealed.
+For instance, few combinatorial interpretations of rascal numbers provided at~\cite{gibbs2024two}, in particular,
+these interpretations establish a relation between rascal numbers and combinatorics of binary words.
+Few generalization approaches were proposed, namely generalized
+and iterated rascal triangles~\cite{hotchkiss2019generalized,gregory2023iterated}.

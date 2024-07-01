@@ -1,9 +1,33 @@
 \begin{thebibliography}{1}
 
+\bibitem{anggoro2010rascal}
+{Anggoro, Alif and Liu, Eddy and Tulloch, Angus}.
+\newblock {The Rascal Triangle}.
+\newblock {\em {The College Mathematics Journal}}, 41(5):393--395, 2010.
+\newblock \url {https://doi.org/10.4169/074683410X521991}.
+
 \bibitem{sloane2002rascal}
 {Sloane, N. J. A.}
 \newblock {The Rascal triangle read by rows. Entry A077028 in The On-Line
   Encyclopedia of Integer Sequences}, 2002.
 \newblock \url {https://oeis.org/A077028}.
+
+\bibitem{gibbs2024two}
+Amelia Gibbs and Brian~K. Miceli.
+\newblock {Two Combinatorial Interpretations of Rascal Numbers}.
+\newblock {\em {arXiv preprint arXiv:2405.11045}}, 2024.
+\newblock \url {https://arxiv.org/abs/2405.11045}.
+
+\bibitem{hotchkiss2019generalized}
+{Hotchkiss, Philip K.}
+\newblock {Generalized Rascal Triangles}.
+\newblock {\em {arXiv preprint arXiv:1907.11159}}, 2019.
+\newblock \url {https://arxiv.org/abs/1907.11159}.
+
+\bibitem{gregory2023iterated}
+{Gregory, Jena and Kronholm, Brandt and White, Jacob}.
+\newblock Iterated ascal triangles.
+\newblock {\em {Aequationes mathematicae}}, pages 1--18, 2023.
+\newblock \url {https://doi.org/10.1007/s00010-023-00987-6}.
 
 \end{thebibliography}

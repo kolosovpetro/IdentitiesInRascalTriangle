@@ -61,7 +61,6 @@
 
 % 1-q pascal notation
 
-
 \newcommand{\genstirlingI}[3]{%
     \genfrac{[}{]}{0pt}{#1}{#2}{#3}%
 }
@@ -69,6 +68,14 @@
     \genfrac{\{}{\}}{0pt}{#1}{#2}{#3}%
 }
 \newcommand{\oneQBinomial}[3]{\genstirlingI{}{#1}{#2}^{#3}}
+
+% free foot note
+\let\svthefootnote\thefootnote
+\newcommand\freefootnote[1]{%
+    \let\thefootnote\relax%
+    \footnotetext{#1}%
+    \let\thefootnote\svthefootnote%
+}
 
 
 \newtheorem{thm}{Theorem}[section]
@@ -93,8 +100,9 @@
     Binomial coefficients,
     Binomial identities,
     Binomial theorem,
-    Generalized Rascal Triangles,
-    Iterated rascal triangles
+    Generalized Rascal triangles,
+    Iterated rascal triangles,
+    Iterated rascal numbers
 }
 \subjclass[2010]{11B25, 11B99}
 \date{\today}
@@ -106,8 +114,11 @@
         Binomial coefficients,
         Binomial identities,
         Binomial theorem,
-        Generalized Rascal Triangles,
-        Iterated rascal triangles
+        Generalized Rascal triangles,
+        Iterated rascal triangles,
+        Iterated rascal numbers,
+        Number triangle,
+        Arithmetic sequence
     },
     pdfauthor={Petro Kolosov},
     pdfkeywords={
@@ -116,8 +127,11 @@
         Binomial coefficients,
         Binomial identities,
         Binomial theorem,
-        Generalized Rascal Triangles,
-        Iterated rascal triangles
+        Generalized Rascal triangles,
+        Iterated rascal triangles,
+        Iterated rascal numbers,
+        Number triangle,
+        Arithmetic sequence
     }
 }
 \begin{document}
@@ -129,7 +143,7 @@
 
     \tableofcontents
 
-
+    \freefootnote{Sources: \url{https://github.com/kolosovpetro/IdentitiesInRascalTriangle}}
     \section{Definitions}\label{sec:definitions}
     \input{sections/definitions}
 

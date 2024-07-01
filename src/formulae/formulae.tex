@@ -268,7 +268,11 @@ Then
     \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} &= \binom{n+i}{i}\\
     \sum_{m=0}^{i} \binom{n+i}{m} \binom{i}{i-m} - \sum_{m=0}^{i-1} \binom{n+i}{m} \binom{i}{m} &= \binom{n+i}{i}
 \end{align*}
-\textit{Generalized relation of difference between rascal numbers and binomial coefficients?}
+\subsection{Difference between binomial coefficients and iterated rascal numbers}
+For every $i < k$
+\begin{align*}
+    \binom{n}{k} - \rascalNumber{n}{k}{i} &= \sum_{m=i+1}^{k} \binom{n-k}{m} \binom{k}{m} \\
+\end{align*}
 \subsection{Claim 4} Relation between $(1,q)$-Pascal's triangle
 \begin{align*}
     \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2}, \quad OneQPascalIdentity1 \\

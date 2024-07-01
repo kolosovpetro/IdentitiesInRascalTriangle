@@ -32,7 +32,7 @@ Amelia Gibbs and Brian~K. Miceli.
 
 \bibitem{gregory2023iterated}
 {Gregory, Jena and Kronholm, Brandt and White, Jacob}.
-\newblock Iterated ascal triangles.
+\newblock Iterated rascal triangles.
 \newblock {\em {Aequationes mathematicae}}, pages 1--18, 2023.
 \newblock \url {https://doi.org/10.1007/s00010-023-00987-6}.
 
@@ -54,12 +54,6 @@ Amelia Gibbs and Brian~K. Miceli.
   Encyclopedia of Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A096943}.
 
-\bibitem{sloane2004pascal}
-{Sloane, N. J. A.}
-\newblock {Pascal (1,5) triangle. Entry A096940 in The On-Line Encyclopedia of
-  Integer Sequences}, 2004.
-\newblock \url {https://oeis.org/A096940}.
-
 \bibitem{sloane1995n}
 {Sloane, N. J. A.}
 \newblock {Entry A006503 in The On-Line Encyclopedia of Integer Sequences},
@@ -71,5 +65,16 @@ Amelia Gibbs and Brian~K. Miceli.
 \newblock {Pascal (1,3) triangle. Entry A095660 in The On-Line Encyclopedia of
   Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A095660}.
+
+\bibitem{sloane2004pascal}
+{Sloane, N. J. A.}
+\newblock {Pascal (1,5) triangle. Entry A096940 in The On-Line Encyclopedia of
+  Integer Sequences}, 2004.
+\newblock \url {https://oeis.org/A096940}.
+
+\bibitem{kolosov2024identities}
+{Kolosov, Petro}.
+\newblock {Identities in Iterated Rascal Triangles Mathematica programs}, 2024.
+\newblock \url {https://github.com/kolosovpetro/IdentitiesInRascalTriangle}.
 
 \end{thebibliography}

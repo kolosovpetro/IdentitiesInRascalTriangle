@@ -72,6 +72,18 @@ Amelia Gibbs and Brian~K. Miceli.
   Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A096940}.
 
+\bibitem{sloane2004seventh}
+{Sloane, N. J. A.}
+\newblock {Seventh column (m=6) of (1,6)-Pascal triangle. Entry A097297 in The
+  On-Line Encyclopedia of Integer Sequences}, 2004.
+\newblock \url {https://oeis.org/A097297}.
+
+\bibitem{sloane2004pascal16}
+{Sloane, N. J. A.}
+\newblock {Pascal (1,6) triangle. Entry A096940 in The On-Line Encyclopedia of
+  Integer Sequences}, 2004.
+\newblock \url {https://oeis.org/A096940}.
+
 \bibitem{kolosov2024identities}
 {Kolosov, Petro}.
 \newblock {Identities in Iterated Rascal Triangles Mathematica programs}, 2024.

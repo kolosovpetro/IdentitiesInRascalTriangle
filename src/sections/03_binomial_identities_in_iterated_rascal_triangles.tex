@@ -29,11 +29,11 @@ Without further hesitation consider our findings.
 \end{proposition}
 Then binomial identity follows
 \begin{align*}
-    \rascalNumber{n}{i-j}{i} = \binom{n}{i-j}
+    \rascalNumber{n}{i-k}{i} = \binom{n}{i-k}
 \end{align*}
 Applying binomial coefficients symmetry principle we obtain
 \begin{align*}
-    \rascalNumber{n}{n-i+j}{i} = \binom{n}{n-i+j}
+    \rascalNumber{n}{n-i+k}{i} = \binom{n}{n-i+k}
 \end{align*}
 \begin{proposition}
     \label{prop:odd-row-proposition}
@@ -44,7 +44,8 @@ Applying binomial coefficients symmetry principle we obtain
 \end{proposition}
 Therefore, for every fixed $i \geq 0$
 \begin{equation}
-    \rascalNumber{2i+1-j}{k}{i} = \binom{2i+1-j}{k}\label{eq:odd-row-identity}
+    \rascalNumber{2i+1-n}{k}{i} = \binom{2i+1-n}{k}
+    \label{eq:odd-row-identity}
 \end{equation}
 Equation~\eqref{eq:odd-row-identity} is of interest because in contrast to rascal
 column identity~\eqref{eq:rascal-column-identity} it gives relation over $k$ for each $i$,
@@ -52,20 +53,23 @@ so that it is true for all cases in $i,k$: $i < k$, $i=k$ and $k >i$.
 
 Taking $t \geq 2i+1$ for every fixed $i \geq 0$
 \begin{align*}
-    \rascalNumber{t-j}{k}{t-i-1}= \binom{t-j}{k}
+    \rascalNumber{t-n}{k}{t-i-1}= \binom{t-n}{k}
 \end{align*}
 Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
 \begin{equation*}
     \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
 \end{equation*}
-For $k=j$ yields the identity for iterated rascal number
-\begin{align*}
-    \rascalNumber{2i+1-j}{j}{i}         &= \binom{2i+1-j}{j}, \quad 0 \leq j \leq i \\
-    \rascalNumber{2i+1-j}{2i+1-2j}{i}   &= \binom{2i+1-j}{2i+1-2j} \\
-    \rascalNumber{t-j}{t-2j}{t-i-1}     &= \binom{t-j}{t-2j}, \quad t \geq 2i+1, \quad 0 \leq j \leq t-i-1
-\end{align*}
+%Let be $k=n$ and $0 \leq n \leq i$ hence the identity for iterated rascal number yieds
+%\begin{align*}
+%    \rascalNumber{2i+1-n}{n}{i}         &= \binom{2i+1-n}{n}
+%\end{align*}
+%By symmetry $\rascalNumber{2i+1-n}{2i+1-2n}{i} = \binom{2i+1-n}{2i+1-2n}$
+%for each $t \geq 2i+1, \; 0 \leq n \leq t-i-1$ follows
+%\begin{align*}
+%    \rascalNumber{t-n}{t-2n}{t-i-1}     &= \binom{t-n}{t-2n}
+%\end{align*}
 \begin{proof}
-    Proof of proposition~\ref{prop:odd-row-proposition}.
+    Proof of proposition~\eqref{prop:odd-row-proposition}.
     We have three possible relations between $i,k$: $k<i$, $k=i$, $k > i$.
     So we have to prove that for every $i,k$
     \begin{equation*}
@@ -111,7 +115,7 @@ Indeed, this rule is true for every $i$.
         \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} = \binom{n+i}{i}
     \end{align*}
     \begin{proof}
-        We have previously stated that iterated rascal number is
+        We have previously stated that iterated rascal numbers are
         closely related to Vandermonde convolution~\eqref{eq:rascal-vandermonde-convolution}.
         Thus, proposition~\eqref{prop:row-column-difference} can be rewritten as
         \begin{align*}
@@ -127,7 +131,8 @@ Applying binomial coefficients symmetry
 \end{align*}
 Taking $j=n+i$ gives
 \begin{align*}
-    \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} &= \binom{j}{j-i}
+    \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} &= \binom{j}{j-i} \\
+    \binom{j+i}{i} - \rascalNumber{j+i}{i}{i-1} &= \binom{j}{i}
 \end{align*}
 Proposition~\eqref{prop:row-column-difference} can be generalized even further, for every fixed $i < k$.
 \begin{proposition}

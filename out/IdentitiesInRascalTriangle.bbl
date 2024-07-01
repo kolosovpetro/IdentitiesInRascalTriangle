@@ -30,4 +30,10 @@ Amelia Gibbs and Brian~K. Miceli.
 \newblock {\em {Aequationes mathematicae}}, pages 1--18, 2023.
 \newblock \url {https://doi.org/10.1007/s00010-023-00987-6}.
 
+\bibitem{sloane2009binomial}
+{Sloane, N. J. A.}
+\newblock {Binomial coefficient binomial(n,4). Entry A000332 in The On-Line
+  Encyclopedia of Integer Sequences}, 2009.
+\newblock \url {https://oeis.org/A000332}.
+
 \end{thebibliography}

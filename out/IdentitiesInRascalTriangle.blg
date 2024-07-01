@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 Database file #1: IdentitiesInRascalTriangle.bib
-You've used 5 entries,
+You've used 6 entries,
             1791 wiz_defined-function locations,
-            481 strings with 4488 characters,
-and the built_in function-call counts, 927 in all, are:
-= -- 90
-> -- 24
+            486 strings with 4650 characters,
+and the built_in function-call counts, 1054 in all, are:
+= -- 100
+> -- 28
 < -- 1
-+ -- 11
-- -- 6
-* -- 39
-:= -- 156
-add.period$ -- 19
-call.type$ -- 5
-change.case$ -- 5
++ -- 13
+- -- 7
+* -- 40
+:= -- 175
+add.period$ -- 22
+call.type$ -- 6
+change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 44
-empty$ -- 95
-format.name$ -- 6
-if$ -- 206
+cite$ -- 6
+duplicate$ -- 49
+empty$ -- 113
+format.name$ -- 7
+if$ -- 236
 int.to.chr$ -- 0
-int.to.str$ -- 5
+int.to.str$ -- 6
 missing$ -- 4
-newline$ -- 32
-num.names$ -- 5
-pop$ -- 13
+newline$ -- 37
+num.names$ -- 6
+pop$ -- 20
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 22
+skip$ -- 25
 stack$ -- 0
 substring$ -- 44
-swap$ -- 10
+swap$ -- 11
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 10
-width$ -- 6
-write$ -- 62
+while$ -- 11
+width$ -- 7
+write$ -- 72

@@ -134,6 +134,7 @@ Pascals triangle as polynomial
     \binom{n}{k}= \frac{\fallingFactorial{n}{k}}{k!}= \frac{1}{k!} n(n-1)(n-2)\cdots (n-(k-1)) = \prod_{i=1}^{k} \frac{n-i+1}{i}
 \end{equation}
 
+
 \section{Formulae}\label{sec:formulae}
 
 \subsection{Claim 0. Vandermonde convolution} Generalized rascal triangle is partial case of Chu-Vandermonde convolution
@@ -205,8 +206,8 @@ Thus we have to prove that
 Rewrite explicitly gives for $i$
 \begin{align*}
     \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} &= \binom{2i+1-n-k}{0} \binom{k}{0} + \binom{2i+1-n-k}{1} \binom{k}{1} \\
-                                                    &+ \binom{2i+1-n-k}{2} \binom{k}{2} + \binom{2i+1-n-k}{3} \binom{k}{3} \\
-                                                    &+ \cdots + \binom{2i+1-n-k}{i} \binom{k}{i}
+    &+ \binom{2i+1-n-k}{2} \binom{k}{2} + \binom{2i+1-n-k}{3} \binom{k}{3} \\
+    &+ \cdots + \binom{2i+1-n-k}{i} \binom{k}{i}
 \end{align*}
 Rewrite explicitly gives for $k$
 \begin{align*}
@@ -238,7 +239,8 @@ Thus,
     \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
 \end{equation*}
 because binomial coefficients $\binom{i-n-s}{i+1+s}$ are zero for each $i, n, s \geq 0$.
-\subsection{Claim 3} Row-column difference identity.
+
+\subsection{Claim 3. Row-column difference binomial identity} Row-column difference identity.
 Proof via Vandermonde's identity.
 For every fixed $i \geq 1$
 \begin{align*}
@@ -248,12 +250,28 @@ For every fixed $i \geq 1$
     \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} &= \binom{j}{j-i}, \quad RowColumnDifferenceIdentity2 \\
 \end{align*}
 
+\subsection{Proof of Row-column difference binomial identity}
+Let be Vandermonde formula
+\begin{equation*}
+    \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
+\end{equation*}
+Let be definition of rascal number
+\begin{equation*}
+    \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
+\end{equation*}
+Then
+\begin{align*}
+    \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} &= \binom{n+i}{i}\\
+    \sum_{m=0}^{i} \binom{n+i}{m} \binom{i}{i-m} - \sum_{m=0}^{i-1} \binom{n+i}{m} \binom{i}{m} &= \binom{n+i}{i}
+\end{align*}
+\textit{Generalized relation of difference between rascal numbers and binomial coefficients?}
 \subsection{Claim 4} Relation between $(1,q)$-Pascal's triangle
 \begin{align*}
     \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2}, \quad OneQPascalIdentity1 \\
     \binom{2(i+2)-1+j}{i+2} - \rascalNumber{2(i+2)-1+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2} \\
     \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t}, \quad OneQPascalIdentity2 \\
 \end{align*}
+
 
 \section{Sides of world}
 \begin{align*}

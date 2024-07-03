@@ -65,7 +65,7 @@ Taking $t \geq 2i+1$ for every fixed $i \geq 0$
     \end{equation*}
     For the case $k<i$ proof is given in Jenna Gregory et al.~\cite{gregory2023iterated}.
     For the case $k=i$ proof is trivial.
-    Thus, the remaining case is $k>i$ yields that
+    Thus, the remaining case is $k>i$ yields
     \begin{equation*}
         \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
     \end{equation*}
@@ -92,10 +92,11 @@ Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
         \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
     \end{equation*}
 \end{proposition}
-In particular, given $n=0$ proposition~\eqref{prop:vandermonde-like-identity} yields
-\begin{equation*}
-    \binom{2i+1}{k} = \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m}
-\end{equation*}
+In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity} yields
+\begin{align*}
+    \binom{2i+1}{k} &= \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m} \\
+    \binom{2i}{k}   &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}
+\end{align*}
 
 Now, let's smoothly switch our focus to finite differences of binomial coefficients and iterated rascal numbers.
 Considering the table of differences $\binom{n}{k}-\rascalNumber{n}{k}{3}$

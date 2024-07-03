@@ -6,8 +6,8 @@ Define the iterated rascal number
         \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
     \end{align}
 \end{definition}
-First important thing is to notice that iterated rascal number
-is a partial case of Vandermonde convolution~\cite{andrews1999special}.
+The first important thing to notice is that the iterated Rascal number is a special case of the Vandermonde convolution.
+Consider the Vandermonde convolution~\cite{andrews1999special}.
 Consider Vandermonde convolution
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
@@ -17,7 +17,7 @@ Thus,
     \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m}
     \label{eq:rascal-vandermonde-convolution}
 \end{equation}
-Therefore, iterated rascal number is partial case of Vandermonde convolution with upper summation bound equals to $i$.
+Therefore, iterated rascal number is partial case of Vandermonde convolution with the upper summation bound equals to $i$.
 Without further hesitation consider our findings.
 \begin{proposition}
     Iterated rascal triangle equals to Pascal's triangle up to $i$-th column.

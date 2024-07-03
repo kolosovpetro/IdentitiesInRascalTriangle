@@ -19,6 +19,8 @@ OneQPascalIdentity2::usage="Validates row identity \\binom{2t-1+j}{t} - \\rascal
 BinomialCoefficientAsPolynomial::usage="Gives binomial coefficient in form of polynomial"
 BinomialRascalDifferenceColumn::usage="Gives Binomial minus rascal column for i, k"
 VandermondeIdentity::usage="Gives Vandermonde identity for Binom(a+b, r)"
+DifferenceBinomialRascal::usage="Gives the difference binom(n,k)-rascal(n,k,i)"
+RowSumsPowerOf2Identity::usage="Conjecture from iterated rascal triangles."
 
 Begin["`Private`"]
 
@@ -53,10 +55,15 @@ OneQPascalIdentity2[i_, rowNumber_]:= Column[Table[Binomial[2i-1+j, i] - RascalN
 BinomialCoefficientAsPolynomial[n_, k_]:= Product[(n-i+1)/i, {i, 1, k}];
 BinomialRascalDifferenceColumn[i_, k_, size_] := Table[Binomial[n,k]-RascalNumber[n,k, i],{n, 2i+1, 2i+1 + size}];
 VandermondeIdentity[a_, b_, r_, upperLimit_] := Sum[Binomial[a, m] * Binomial[b, r-m], {m, 0, upperLimit}];
+DifferenceBinomialRascal[n_, k_, i_]:=Sum[Binomial[n-k, m]*Binomial[k, k-m], {m, i+1, k}];
+RowSumsPowerOf2Identity[i_]:= Sum[RascalNumber[4*i+3, d, i], {d, 0, 4i+3}];
 
 End[ ]
 
 EndPackage[ ]
+
+
+
 
 
 

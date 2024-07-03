@@ -17,13 +17,32 @@ They devised this new row via so-called diamond formula
 \end{align*}
 
 So that upcoming rows of the triangle are
-\input{figures/01_rascal_triangle_i_1}
+\begin{table}[H]
+    \begin{center}
+        \setlength\extrarowheight{-6pt}
+        \begin{tabular}{c|cccccccc}
+            $n/k$ & 0 & 1 & 2  & 3  & 4  & 5  & 6 & 7 \\
+            \hline
+            0     & 1 &   &    &    &    &    &   &   \\
+            1     & 1 & 1 &    &    &    &    &   &   \\
+            2     & 1 & 2 & 1  &    &    &    &   &   \\
+            3     & 1 & 3 & 3  & 1  &    &    &   &   \\
+            4     & 1 & 4 & 5  & 4  & 1  &    &   &   \\
+            5     & 1 & 5 & 7  & 7  & 5  & 1  &   &   \\
+            6     & 1 & 6 & 9  & 10 & 9  & 6  & 1 &   \\
+            7     & 1 & 7 & 11 & 13 & 13 & 11 & 7 & 1
+        \end{tabular}
+    \end{center}
+    \caption{Rascal triangle. See the OEIS sequence \href{https://oeis.org/A077028}{\texttt{A077028}}~\cite{sloane2002rascal}.}
+    \label{tab:rascal-triangle-i-1}
+\end{table}
+
 
 Since then, a lot of work has been done over the topic of rascal triangles.
 Numerous identities and relations have been revealed.
-For instance, few combinatorial interpretations of rascal numbers provided at~\cite{gibbs2024two}, in particular,
+For instance, a few combinatorial interpretations of rascal numbers provided at~\cite{gibbs2024two}, in particular,
 these interpretations establish a relation between rascal numbers and combinatorics of binary words.
-Few generalization approaches were proposed, namely generalized
+Several generalization approaches were proposed, namely generalized
 and iterated rascal triangles~\cite{hotchkiss2019generalized,gregory2023iterated}.
 In particular, the concept of iterated rascal numbers establishes a close connection between rascal numbers and binomial
 coefficients.

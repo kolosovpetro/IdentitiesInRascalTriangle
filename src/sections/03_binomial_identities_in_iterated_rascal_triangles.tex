@@ -6,8 +6,8 @@ Define the iterated rascal number
         \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
     \end{align}
 \end{definition}
-First important thing is to notice that iterated rascal number
-is a partial case of Vandermonde convolution~\cite{andrews1999special}.
+The first important thing to notice is that the iterated Rascal number is a special case of the Vandermonde convolution.
+Consider the Vandermonde convolution~\cite{andrews1999special}.
 Consider Vandermonde convolution
 \begin{equation*}
     \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
@@ -17,7 +17,7 @@ Thus,
     \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m}
     \label{eq:rascal-vandermonde-convolution}
 \end{equation}
-Therefore, iterated rascal number is partial case of Vandermonde convolution with upper summation bound equals to $i$.
+Therefore, iterated rascal number is partial case of Vandermonde convolution with the upper summation bound equals to $i$.
 Without further hesitation consider our findings.
 \begin{proposition}
     Iterated rascal triangle equals to Pascal's triangle up to $i$-th column.
@@ -65,7 +65,7 @@ Taking $t \geq 2i+1$ for every fixed $i \geq 0$
     \end{equation*}
     For the case $k<i$ proof is given in Jenna Gregory et al.~\cite{gregory2023iterated}.
     For the case $k=i$ proof is trivial.
-    Thus, the remaining case is $k>i$ yields that
+    Thus, the remaining case is $k>i$ yields
     \begin{equation*}
         \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
     \end{equation*}
@@ -92,16 +92,17 @@ Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
         \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
     \end{equation*}
 \end{proposition}
-In particular, given $n=0$ proposition~\eqref{prop:vandermonde-like-identity} yields
-\begin{equation*}
-    \binom{2i+1}{k} = \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m}
-\end{equation*}
+In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity} yields
+\begin{align*}
+    \binom{2i+1}{k} &= \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m} \\
+    \binom{2i}{k}   &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}
+\end{align*}
 
 Now, let's smoothly switch our focus to finite differences of binomial coefficients and iterated rascal numbers.
 Considering the table of differences $\binom{n}{k}-\rascalNumber{n}{k}{3}$
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../img/01_Difference_Binomial_Rascal_i_3_BinomialCoefficients}
+    \includegraphics[width=1\textwidth]{img/01_Difference_Binomial_Rascal_i_3_BinomialCoefficients}
     ~\caption{Difference $\binom{n}{k}-\rascalNumber{n}{k}{3}$.
     Highlighted column is $\binom{n}{4}$.
     Sequence \href{https://oeis.org/A000332}{\texttt{A000332}} in the OEIS~\cite{sloane2009binomial}.}

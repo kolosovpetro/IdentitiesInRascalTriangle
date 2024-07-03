@@ -61,6 +61,7 @@ jobs:
             src/${{ env.FILE_NAME }}.bbl
             src/${{ env.FILE_NAME }}.bib
             src/sections
+            src/img
 
       - name: Upload artifacts PDF
         uses: actions/upload-artifact@v3

@@ -1,0 +1,16 @@
+﻿\begin{align*}
+    \north &= \rascalNumber{n-2}{k-1}{i} \\
+    \south &= \rascalNumber{n}{k}{i} \\
+    \west  &= \rascalNumber{n-1}{k-1}{i} \\
+    \east  &= \rascalNumber{n-1}{k}{i}
+\end{align*}
+Identity see Hotchkiss
+\begin{align}
+    \south                  &= \frac{\east \cdot \west + 1}{\north} \\
+    \rascalNumber{n}{k}{i}  &= \frac{\rascalNumber{n-1}{k}{i} \rascalNumber{n-1}{k-1}{i} +1}{\rascalNumber{n-2}{k-1}{i}}
+\end{align}
+Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
+\begin{align}
+    \south                 &= \east + \west - \north  + 1 \\
+    \rascalNumber{n}{k}{i} &= \rascalNumber{n-1}{k}{i} + \rascalNumber{n-1}{k-1}{i} - \rascalNumber{n-2}{k-1}{i} + 1
+\end{align}

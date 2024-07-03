@@ -79,6 +79,7 @@
 \newtheorem{examp}[thm]{Example}
 \newtheorem{conj}[thm]{Conjecture}
 \newtheorem{defn}[thm]{Definition}
+\newtheorem{proposition}[thm]{Proposition}
 
 \numberwithin{equation}{section}
 
@@ -268,11 +269,13 @@ Then
     \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} &= \binom{n+i}{i}\\
     \sum_{m=0}^{i} \binom{n+i}{m} \binom{i}{i-m} - \sum_{m=0}^{i-1} \binom{n+i}{m} \binom{i}{m} &= \binom{n+i}{i}
 \end{align*}
+
 \subsection{Difference between binomial coefficients and iterated rascal numbers}
 For every $i < k$
 \begin{align*}
     \binom{n}{k} - \rascalNumber{n}{k}{i} &= \sum_{m=i+1}^{k} \binom{n-k}{m} \binom{k}{m} \\
 \end{align*}
+
 \subsection{Claim 4} Relation between $(1,q)$-Pascal's triangle
 \begin{align*}
     \binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} &= \oneQBinomial{i+2+j}{i+2}{i+2}, \quad OneQPascalIdentity1 \\
@@ -280,24 +283,12 @@ For every $i < k$
     \binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} &= \oneQBinomial{t+j}{t}{t}, \quad OneQPascalIdentity2 \\
 \end{align*}
 
+\section{Row sums power of 2 identity}
+\input{row_sums_power_2_identity}
 
-\section{Sides of world}
-\begin{align*}
-    \north &= \rascalNumber{n-2}{k-1}{i} \\
-    \south &= \rascalNumber{n}{k}{i} \\
-    \west  &= \rascalNumber{n-1}{k-1}{i} \\
-    \east  &= \rascalNumber{n-1}{k}{i}
-\end{align*}
-Identity see Hotchkiss
-\begin{align}
-    \south                  &= \frac{\east \cdot \west + 1}{\north} \\
-    \rascalNumber{n}{k}{i}  &= \frac{\rascalNumber{n-1}{k}{i} \rascalNumber{n-1}{k-1}{i} +1}{\rascalNumber{n-2}{k-1}{i}}
-\end{align}
-Identity see Hotchkiss, for all inner $k > 0$ and $k < n$
-\begin{align}
-    \south                 &= \east + \west - \north  + 1 \\
-    \rascalNumber{n}{k}{i} &= \rascalNumber{n-1}{k}{i} + \rascalNumber{n-1}{k-1}{i} - \rascalNumber{n-2}{k-1}{i} + 1
-\end{align}
+
+%\section{Sides of world}
+%\input{sides_of_world}
 
 
 

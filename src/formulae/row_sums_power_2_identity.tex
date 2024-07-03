@@ -1,0 +1,53 @@
+﻿By definition
+\begin{align}
+    \rascalNumber{n}{k}{i} &= \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m}
+\end{align}
+Consider Vandermonde convolution
+\begin{equation*}
+    \binom{a+b}{r} = \sum_{m=0}^{r} \binom{a}{m} \binom{b}{r-m}
+\end{equation*}
+Then generalized rascal number is partial case of Vandermonde convolution with upper summation bound equals $i$
+\begin{equation*}
+    \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{m} = \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m}
+\end{equation*}
+Difference between binomial coefficients and iterated rascal numbers
+\begin{align*}
+    \binom{n}{k} - \rascalNumber{n}{k}{i} &= \sum_{m=i+1}^{k} \binom{n-k}{m} \binom{k}{k-m}
+\end{align*}
+\begin{proposition}
+    Row $4i+3$ sum gives $2^{4i+2}$
+    \begin{align*}
+        \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2}
+%        \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= \sum_{k=0}^{4i+3} \sum_{m=0}^{i} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}
+    \end{align*}
+\end{proposition}
+\begin{align*}
+    \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2} \\
+    \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= \sum_{k=0}^{4i+3} \sum_{m=0}^{i} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}
+\end{align*}
+We know that sum of binomial coefficients equals $2^n$
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \binom{4i+3}{k}  = 2^{4i+3}
+\end{equation*}
+If conjecture holds, then it must be true that
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \binom{4i+3}{k} - \rascalNumber{4i+3}{k}{i} = 2^{4i+2}
+\end{equation*}
+because $2^n - 2^n = 2^{n-1}$.
+Thus,
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \sum_{m=i+1}^{k} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}
+\end{equation*}
+In case $k<i$ the sum $\sum_{m=i+1}^{k} \binom{4i+3-k}{m}$ is always zero.
+\begin{equation*}
+    \sum_{k=i+1}^{4i+3} \sum_{m=i+1}^{k} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}
+\end{equation*}
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \sum_{m=i+1}^{k} \binom{4i+3-(i+1+k)}{m} \binom{k}{m} = 2^{4i+2}
+\end{equation*}
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \sum_{m=i+1}^{k} \binom{3i+2-k}{m} \binom{k}{m} = 2^{4i+2}
+\end{equation*}
+\begin{equation*}
+    \sum_{k=0}^{4i+3} \sum_{m=0}^{k} \binom{3i+2-k}{i+1+m} \binom{k}{i+1+m} = 2^{4i+2}
+\end{equation*}

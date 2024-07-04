@@ -1,0 +1,55 @@
+﻿In~\cite{gregory2023iterated} the authors
+propose the following conjecture for row sums of iterated rascal triangles.
+\begin{conj}
+    \label{conjecture:row_sums}
+    (Conjecture 7.5 in~\cite{gregory2023iterated}.)
+    For every $i$
+    \begin{align*}
+        \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2}
+    \end{align*}
+\end{conj}
+\begin{proof}
+    Rewrite conjecture statement explicitly as
+    \begin{align*}
+        \sum_{k=0}^{4i+3} \sum_{m=0}^{i} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}
+    \end{align*}
+    Rearranging sums and omitting summation bounds yields
+    \begin{equation}
+        \sum_{m=0}^{i}  \sum_{k} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}\label{eq:row_sums_conjecture_explicit}
+    \end{equation}
+    In Concrete mathematics [\cite{graham1994concrete}, p.\ 169, eq (5.26)], Knuth et al.
+    provide the identity for the column sum of binomial coefficients multiplication
+    \begin{equation}
+        \label{eq:binomial_coefficients_column_sum}
+        \sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}
+    \end{equation}
+    We can observe this pattern in the equation~\eqref{eq:row_sums_conjecture_explicit},
+    thus the sum $\sum_{k} \binom{4i+3-k}{m} \binom{k}{m}$ equals to
+    \begin{align*}
+        \sum_{k} \binom{4i+3-k}{m} \binom{k}{m} = \binom{4i+4}{2m+1}
+    \end{align*}
+    Therefore, conjecture~\eqref{conjecture:row_sums} is equivalent to
+    \begin{align*}
+        \sum_{m=0}^{i} \binom{4i+4}{2m+1} = 2^{4i+2}
+    \end{align*}
+    Note that
+    \begin{align*}
+        \sum_{m=0}^{2i+1} \binom{4i+4}{2m+1} = 2^{4i+3}
+    \end{align*}
+    So that
+    \begin{align*}
+        \sum_{m=0}^{\frac{2i+1}{2}} \binom{4i+4}{2m+1} = \sum_{m=0}^{i} \binom{4i+4}{2m+1} = 2^{4i+2}
+    \end{align*}
+    This completes the proof.
+\end{proof}
+\begin{proposition}
+    For every $i$
+    \begin{align*}
+        \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2}
+    \end{align*}
+\end{proposition}
+In particular, equation~\eqref{eq:binomial_coefficients_column_sum} assumes the following identity in
+row sums of iterated rascal triangles
+\begin{align*}
+    \sum\limits_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1}
+\end{align*}

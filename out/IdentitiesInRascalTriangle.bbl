@@ -84,9 +84,19 @@ Amelia Gibbs and Brian~K. Miceli.
   Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A096940}.
 
+\bibitem{graham1994concrete}
+{Graham, Ronald L. and Knuth, Donald E. and Patashnik, Oren}.
+\newblock {\em {Concrete mathematics: a foundation for computer science}}.
+\newblock {Pearson Education India}, 1994.
+
 \bibitem{kolosov2024identities}
 {Kolosov, Petro}.
 \newblock {Identities in Iterated Rascal Triangles Mathematica programs}, 2024.
 \newblock \url {https://github.com/kolosovpetro/IdentitiesInRascalTriangle}.
+
+\bibitem{kolosov2024iterated}
+{Kolosov, Petro}.
+\newblock {"Iterated rascal triangle row sums" on MathStackExchange}, 2024.
+\newblock \url {https://math.stackexchange.com/q/4941336/463487}.
 
 \end{thebibliography}

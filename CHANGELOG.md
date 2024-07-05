@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 
 ## [1.1.0] - 2024-07-05
 ### Changed
+- More clear proof of conjecture
+
+## [1.1.0] - 2024-07-05
+### Changed
 - Added proof for row sums identity
 - Acknowledgements section added
 - References added

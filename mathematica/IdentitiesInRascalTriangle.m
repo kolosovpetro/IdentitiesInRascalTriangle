@@ -21,6 +21,8 @@ BinomialRascalDifferenceColumn::usage="Gives Binomial minus rascal column for i,
 VandermondeIdentity::usage="Gives Vandermonde identity for Binom(a+b, r)"
 DifferenceBinomialRascal::usage="Gives the difference binom(n,k)-rascal(n,k,i)"
 RowSumsPowerOf2Identity::usage="Conjecture from iterated rascal triangles."
+A::usage= "A[n, k] returns the real coefficient A of non-negative integers n, k such that n <= k. 
+See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
 
 Begin["`Private`"]
 
@@ -58,9 +60,16 @@ VandermondeIdentity[a_, b_, r_, upperLimit_] := Sum[Binomial[a, m] * Binomial[b,
 DifferenceBinomialRascal[n_, k_, i_]:=Sum[Binomial[n-k, m]*Binomial[k, k-m], {m, i+1, k}];
 RowSumsPowerOf2Identity[i_]:= Sum[RascalNumber[4*i+3, d, i], {d, 0, 4i+3}];
 
+A[n_, k_] := 0;
+A[n_, k_] := (2k + 1) * Binomial[2k, k] * Sum[A[n, j] * Binomial[j, 2k + 1] * (-1)^(j - 1) / (j - k) * BernoulliB[2j - 2k], {j, 2k + 1, n}] /; 0 <= k < n;
+A[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
+
 End[ ]
 
 EndPackage[ ]
+
+
+
 
 
 

@@ -1,22 +1,23 @@
-In 2010, three middle school students, Alif Anggoro, Eddy Liu, and Angus Tulloch~\cite{anggoro2010rascal},
-were challenged to provide the next row for the number triangle shown below
+Rascal triangle is Pascal-like numeric triangle developed in 2010 by three middle school students,
+Alif Anggoro, Eddy Liu, and Angus Tulloch~\cite{anggoro2010rascal}.
+During math classes they were challenged to provide the next row for the following number triangle
 \[
     \begin{array}{cccccccc}
         &   &   &   & 1 &   &   &   \\
         &   &   & 1 &   & 1 &   &   \\
         &   & 1 &   & 2 &   & 1 &   \\
         & 1 &   & 3 &   & 3 &   & 1 \\
+        & & & & \dots & &
     \end{array}
 \]
 
-The expected answer that matches Pascal's triangle~\cite{sloane1994pascal} was ``1 4 6 4 1''.
+Teacher's expected answer was the one that matches Pascal's triangle, e.g ``1 4 6 4 1''.
 However, Anggoro, Liu, and Tulloch suggested ``1 4 5 4 1'' instead.
-They devised this new row via so-called diamond formula
+They devised this new row via what they called diamond formula
 \begin{align*}
     \south  = \frac{\east \cdot \west + 1}{\north}
 \end{align*}
-
-So that upcoming rows of the triangle are
+So they obtained the following triangle
 \begin{table}[H]
     \begin{center}
         \setlength\extrarowheight{-6pt}
@@ -36,7 +37,7 @@ So that upcoming rows of the triangle are
     \caption{Rascal triangle. See the OEIS sequence \href{https://oeis.org/A077028}{\texttt{A077028}}~\cite{sloane2002rascal}.}
     \label{tab:rascal-triangle-i-1}
 \end{table}
-
+Indeed, the forth row is ``1 4 5 4 1'' because $4= \frac{1 \cdot 3 + 1}{1}$ and $5 = \frac{3 \cdot 3 + 1}{2}$.
 
 Since then, a lot of work has been done over the topic of rascal triangles.
 Numerous identities and relations have been revealed.

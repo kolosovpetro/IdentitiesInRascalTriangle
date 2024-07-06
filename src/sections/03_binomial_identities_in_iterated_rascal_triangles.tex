@@ -43,7 +43,7 @@ Applying binomial coefficients symmetry principle we obtain
 \begin{proof}
     Proof of proposition~\eqref{prop:rascal-binomial-identity-for-i}.
     Consider the following relation between binomial coefficients and iterated rascal numbers,
-    for every $0 \leq k \leq i$
+    for every $k \leq i$
     \begin{align*}
         \binom{n}{k} - \rascalNumber{n}{k}{i} = \sum_{m=0}^{k} \binom{n-k}{m} \binom{k}{k-m} - \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m} = 0
     \end{align*}
@@ -142,7 +142,7 @@ We can spot that having $i=3$ the $k=4$-th column gives binomial coefficient $\b
 Indeed, this rule is true for every $i$.
 \begin{proposition}
     \label{prop:row-column-difference}
-    (Row-column difference.) For every fixed $i\geq0$
+    (Row-column difference.) For every $i\geq0$
     \begin{align*}
         \binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} = \binom{n+i}{i}
     \end{align*}
@@ -163,13 +163,16 @@ Applying binomial coefficients symmetry
 \end{align*}
 Taking $j=n+i$ gives
 \begin{align*}
-    \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} &= \binom{j}{j-i} \\
-    \binom{j+i}{i} - \rascalNumber{j+i}{i}{i-1} &= \binom{j}{i}
+    \binom{j+i}{j} - \rascalNumber{j+i}{j}{i-1} = \binom{j}{j-i}
 \end{align*}
-Proposition~\eqref{prop:row-column-difference} can be generalized even further, for every fixed $i<k$ and $i>k$.
+By symmetry
+\begin{align*}
+    \binom{j+i}{i} - \rascalNumber{j+i}{i}{i-1} = \binom{j}{i}
+\end{align*}
+Proposition~\eqref{prop:row-column-difference} can be generalized even further, for every $i<k$ and $i>k$.
 \begin{proposition}
 (Finite difference of binomial coefficients and iterated rascal numbers for $i<k$.)
-    For every fixed $i<k$
+    For every $i<k$
     \label{prop:row-column-difference-general}
     \begin{align*}
         \binom{n}{k} - \rascalNumber{n}{k}{i} &= \sum_{m=i+1}^{k} \binom{n-k}{m} \binom{k}{k-m}
@@ -180,7 +183,7 @@ Proposition~\eqref{prop:row-column-difference} can be generalized even further, 
 \end{proposition}
 \begin{proposition}
 (Finite difference of binomial coefficients and iterated rascal numbers for $i>k$.)
-    For every fixed $i>k$
+    For every $i>k$
     \label{prop:row-column-difference-general-i-greater-k}
     \begin{align*}
         \binom{n}{k} - \rascalNumber{n}{k}{i} &= \sum_{m=k+1}^{i} \binom{n-k}{m} \binom{k}{k-m}

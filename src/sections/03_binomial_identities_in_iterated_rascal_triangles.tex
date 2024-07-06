@@ -85,15 +85,16 @@ Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
         \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
     \end{equation*}
 \end{proposition}
-In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity} yields
+In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity}
+gives the following binomial identities
 \begin{align*}
     \binom{2i+1}{k} &= \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m} \\
     \binom{2i}{k}   &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}
 \end{align*}
 \begin{proof}
     Proof of proposition~\eqref{prop:odd-row-proposition}.
-    We have three possible relations between $i,k$: $k<i$, $k=i$, $k > i$.
-    So we have to prove that for every $i,k$
+%    We have three possible relations between $i,k$: $k<i$, $k=i$, $k > i$.
+    We have to prove that for every $i,k$
     \begin{equation*}
         \sum_{m=0}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} - \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
     \end{equation*}
@@ -114,7 +115,7 @@ In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity} 
     because $\sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}$, see equation (5.26) in~\cite{graham1994concrete}.
     Substituting $m=i+1+m$ we get
     \begin{equation*}
-        \sum_{m=0}^{k} \binom{2i+2-n}{2(i+1+m)+1} = \sum_{m=0}^{k} \binom{2i+2-n}{2i+2m+3} = 0
+        \sum_{m=0}^{k} \binom{2i+2-n}{2(i+1+m)+1} = \sum_{m=0}^{k} \binom{2i+2-n}{2i+3+2m} = 0
     \end{equation*}
     Which is indeed true for every $m,n \geq 0$.
     This completes the proof.
@@ -143,7 +144,7 @@ Indeed, this rule is true for every $i$.
         closely related to Vandermonde convolution~\eqref{eq:rascal-vandermonde-convolution}.
         Thus, proposition~\eqref{prop:row-column-difference} can be rewritten as
         \begin{align*}
-            \sum_{m=0}^{i} \binom{n+i}{m} \binom{i}{i-m} - \sum_{m=0}^{i-1} \binom{n+i}{m} \binom{i}{m}
+            \sum_{m=0}^{i} \binom{n+i}{m} \binom{i}{i-m} - \sum_{m=0}^{i-1} \binom{n+i}{m} \binom{i}{i-m} = \binom{n+i}{i} \binom{i}{0}
         \end{align*}
         Therefore, $\binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} = \binom{n+i}{i}$ is indeed true.
     \end{proof}

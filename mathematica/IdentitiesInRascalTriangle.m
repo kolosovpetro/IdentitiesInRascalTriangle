@@ -25,6 +25,8 @@ A::usage= "A[n, k] returns the real coefficient A of non-negative integers n, k 
 See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
 RascalTriangleDiagonal::usage= "Gives iterated rascal triangle R(i) n-th diagonal up to specific term."
 ColumnDifferenceIdentity::usage= "Binom(n+2i, i)-R(n+2i, i) difference"
+RascalRowSum::usage= "Gives n-th row sum of iterated rascal triangle"
+RascalColumnSum::usage= "Gives sum of k-th column up to fixed value."
 
 Begin["`Private`"]
 
@@ -68,11 +70,12 @@ A[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 
 RascalTriangleDiagonal[n_, i_, count_]:= Table[RascalNumber[n+d, d, i], {d, 0, count}];
 ColumnDifferenceIdentity[i_, count_]:=Table[Binomial[n+2i,i]-RascalNumber[n+2i,i, i-1], {n, 0, count}];
+RascalRowSum[n_, i_]:=Sum[RascalNumber[n, k, i], {k, 0, n}];
+RascalColumnSum[k_, i_, max_]:= Sum[RascalNumber[n, k, i], {n, 0, max}];
 
 End[ ]
 
 EndPackage[ ]
-
 
 
 

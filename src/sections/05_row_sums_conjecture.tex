@@ -20,7 +20,7 @@ propose the following conjecture for row sums of iterated rascal triangles.
     In Concrete mathematics [\cite{graham1994concrete}, p.\ 169, eq (5.26)], Knuth et al.
     provide the identity for the column sum of binomial coefficients multiplication
     \begin{equation}
-        \label{eq:binomial_coefficients_column_sum}
+        \label{eq:knuth-column-sum}
         \sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}
     \end{equation}
     We can observe this pattern in the equation~\eqref{eq:row_sums_conjecture_explicit},
@@ -48,8 +48,20 @@ propose the following conjecture for row sums of iterated rascal triangles.
         \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2}
     \end{align*}
 \end{proposition}
-In particular, equation~\eqref{eq:binomial_coefficients_column_sum} assumes the following identity in
+In particular, equation~\eqref{eq:knuth-column-sum} assumes the following identity in
 row sums of iterated rascal triangles
 \begin{align*}
-    \sum\limits_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1}
+    \sum_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1}
 \end{align*}
+Decomposing $\binom{n+1}{2m+1}$ in above equation yields
+\begin{proposition} (Iterated rascal triangles row sums.)
+    For every $i$
+    \begin{align*}
+        \sum_{k=0}^{n} \rascalNumber{n}{k}{i} = \sum_{m=0}^{2i+1} \binom{n}{k}
+    \end{align*}
+    \begin{proof}
+        \begin{align*}
+            \sum_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1} = \sum_{m=0}^{i} \binom{n}{2m} + \binom{n}{2m+1} = \sum_{m=0}^{2i+1} \binom{n}{k}
+        \end{align*}
+    \end{proof}
+\end{proposition}

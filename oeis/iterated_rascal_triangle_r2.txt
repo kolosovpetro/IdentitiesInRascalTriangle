@@ -2,7 +2,6 @@
 
 1, 1, 1, 1, 2, 1, 1, 3, 3, 1, 1, 4, 6, 4, 1, 1, 5, 10, 10, 5, 1, 1, 6, 15, 19, 15, 6, 1, 1, 7, 21, 31, 31, 21, 7, 1, 1, 8, 28, 46, 53, 46, 28, 8, 1, 1, 9, 36, 64, 81, 81, 64, 36, 9, 1, 1, 10, 45, 85, 115, 126, 115, 85, 45, 10, 1, 1, 11, 55, 109, 155, 181, 181, 155, 109, 55, 11, 1, 1, 12, 66, 136, 201, 246, 262, 246, 201, 136, 66, 12, 1, 1, 13, 78, 166, 253, 321, 358, 358, 321, 253, 166, 78, 13, 1, 1, 14, 91, 199, 311, 406, 469, 491, 469, 406, 311, 199, 91, 14, 1, 1, 15, 105, 235, 375, 501, 595, 645, 645, 595, 501, 375, 235, 105, 15, 1
 
-T(n,k) = 1 + k (n-k) + 1/4*(k-1)*k*(n-k-1)*(n-k)
 ---------------------------------------------------
 k=     0  1   2   3   4    5    6    7    8   9  10
 ---------------------------------------------------
@@ -30,7 +29,9 @@ RascalTriangleDiagonal[7, 2, 150]: missing
 RascalTriangleDiagonal[8, 2, 150]: missing
 Cf. A077028, A000027, A000217, A005448, A056108, A212656, A000292, A095667, A095666
 
-Comments:
+Formula:
+T(n,k)=sum_{m=0..2} binomial(n-k,m)*binomial(k,m)
+T(n,k) = 1 + k (n-k) + 1/4*(k-1)*k*(n-k-1)*(n-k)
 Diagonal T(n+1, n) gives T(n+1, n)=A000027(n)
 Diagonal T(n+2, n) gives T(n+2, n)=A000217(n)
 Diagonal T(n+3, n) gives T(n+3, n)=A005448(n)
@@ -39,6 +40,16 @@ Diagonal T(n+5, n) gives T(n+5, n)=A212656(n)
 Column k=3 difference binomial(n+6, 3) - T(n+6, 3) gives C(n+3,3)=A000292(n+3,3)
 Column k=4 difference binomial(n+7, 4) - T(n+7, 4) gives fifth column of (1,4)-pascal triangle A095667(n)
 
+Comments:
+Triangle T(n,k) is the second triangle R2 in rascal-family triangles, A077028 is triangle R1.
+Triangle T(n,k) equals to Pascal's triangle A000292 up to 2i+1 row, i=2.
+Triangle T(n,k) equals to Pascal's triangle A000292 up to i-th column, i=2.
+
 Mathematica:
 t[n_, k_]:=Sum[Binomial[n - k, m]* Binomial[k, m], {m, 0, 2}]; Column[Table[RascalNumber[n, k, 2], {n, 0, 12}, {k, 0, n}], Center] (* ~~~~ *)
 
+How to generate b-file:
+values = Flatten[Table[t[n, k], {n, 0, 50}, {k, 0, n}]];
+table = Table[{i, values[[i + 1]]}, {i, 0, Length[values] - 1}];
+
+Grid[table, Frame -> All]

@@ -24,6 +24,7 @@ RowSumsPowerOf2Identity::usage="Conjecture from iterated rascal triangles."
 A::usage= "A[n, k] returns the real coefficient A of non-negative integers n, k such that n <= k. 
 See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
 RascalTriangleDiagonal::usage= "Gives iterated rascal triangle R(i) n-th diagonal up to specific term."
+ColumnDifferenceIdentity::usage= "Binom(n+2i, i)-R(n+2i, i) difference"
 
 Begin["`Private`"]
 
@@ -66,6 +67,7 @@ A[n_, k_] := (2k + 1) * Binomial[2k, k] * Sum[A[n, j] * Binomial[j, 2k + 1] * (-
 A[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 
 RascalTriangleDiagonal[n_, i_, count_]:= Table[RascalNumber[n+d, d, i], {d, 0, count}];
+ColumnDifferenceIdentity[i_, count_]:=Table[Binomial[n+2i,i]-RascalNumber[n+2i,i, i-1], {n, 0, count}];
 
 End[ ]
 

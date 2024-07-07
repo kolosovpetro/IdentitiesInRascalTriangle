@@ -1,4 +1,6 @@
-﻿RascalTriangleDiagonal[2, 2, 150]: https://oeis.org/A000217
+﻿RascalTriangleDiagonal[2, 1, 150]: https://oeis.org/A005408
+RascalTriangleDiagonal[1, 2, 150]: https://oeis.org/A000027
+RascalTriangleDiagonal[2, 2, 150]: https://oeis.org/A000217
 RascalTriangleDiagonal[3, 1, 150]: https://oeis.org/A016777
 RascalTriangleDiagonal[3, 2, 150]: https://oeis.org/A005448
 RascalTriangleDiagonal[3, 3, 150]: https://oeis.org/A000292

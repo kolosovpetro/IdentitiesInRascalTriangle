@@ -57,11 +57,11 @@ Decomposing $\binom{n+1}{2m+1}$ in above equation yields
 \begin{proposition} (Iterated rascal triangles row sums.)
     For every $i$
     \begin{align*}
-        \sum_{k=0}^{n} \rascalNumber{n}{k}{i} = \sum_{m=0}^{2i+1} \binom{n}{k}
+        \sum_{k=0}^{n} \rascalNumber{n}{k}{i} = \sum_{m=0}^{2i+1} \binom{n}{m}
     \end{align*}
     \begin{proof}
         \begin{align*}
-            \sum_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1} = \sum_{m=0}^{i} \binom{n}{2m} + \binom{n}{2m+1} = \sum_{m=0}^{2i+1} \binom{n}{k}
+            \sum_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1} = \sum_{m=0}^{i} \binom{n}{2m} + \binom{n}{2m+1} = \sum_{m=0}^{2i+1} \binom{n}{m}
         \end{align*}
     \end{proof}
 \end{proposition}

@@ -27,6 +27,9 @@ RascalTriangleDiagonal::usage= "Gives iterated rascal triangle R(i) n-th diagona
 ColumnDifferenceIdentity::usage= "Binom(n+2i, i)-R(n+2i, i) difference"
 RascalRowSum::usage= "Gives n-th row sum of iterated rascal triangle"
 RascalColumnSum::usage= "Gives sum of k-th column up to fixed value."
+RascalInternalSum::usage= "Gives sum of rows k=2 to n of rascal number except 1."
+RascalInternalSum2::usage= "Gives sum of rows k=2 to n of rascal number except 1."
+RascalInternalSum3::usage= "Gives sum of rows k=2 to n of rascal number except 1."
 
 Begin["`Private`"]
 
@@ -72,6 +75,9 @@ RascalTriangleDiagonal[n_, i_, count_]:= Table[RascalNumber[n+d, d, i], {d, 0, c
 ColumnDifferenceIdentity[i_, count_]:=Table[Binomial[n+2i,i]-RascalNumber[n+2i,i, i-1], {n, 0, count}];
 RascalRowSum[n_, i_]:=Sum[RascalNumber[n, k, i], {k, 0, n}];
 RascalColumnSum[k_, i_, max_]:= Sum[RascalNumber[n, k, i], {n, 0, max}];
+RascalInternalSum[n_, i_]:=Sum[Sum[RascalNumber[k, t, i], {t, 1, k-1}], {k, 2, n}];
+RascalInternalSum2[n_, i_]:=Sum[Sum[RascalNumber[k, t+1, i], {t, 0, k-2}], {k, 2, n}];
+RascalInternalSum3[n_, i_]:=Sum[Sum[RascalNumber[k, k-2-t-1, i], {t, 0, k+2}], {k, 2, n}];
 
 End[ ]
 

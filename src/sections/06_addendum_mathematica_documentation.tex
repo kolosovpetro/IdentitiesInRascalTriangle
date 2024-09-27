@@ -1,0 +1,12 @@
+Mathematica programs documentation.
+See~\cite{kolosov2024identities}.
+\begin{itemize}
+    \item \texttt{ColumnIdentity1[20, 20]} validates $\rascalNumber{n}{i-k}{i} = \binom{n}{i-k}$
+    \item \texttt{ColumnIdentity2[20, 20]} validates $\rascalNumber{n}{n-i+k}{i} = \binom{n}{n-i+k}$
+    \item \texttt{RowIdentity1[5]} validates $\rascalNumber{2i+1-n}{k}{i} = \binom{2i+1-n}{k}$, see~\eqref{eq:odd-row-identity}
+    \item \texttt{RowIdentity2[12, 5]]} validates $\rascalNumber{t-n}{k}{t-i-1}= \binom{t-n}{k}$
+    \item \texttt{RowColumnDifferenceIdentity1[10, 20]} validates $\binom{n+2i}{i} - \rascalNumber{n+2i}{i}{i-1} = \binom{n+i}{i}$, see~\eqref{prop:row-column-difference}.
+    \item \texttt{RowColumnDifferenceIdentity2[10, 20]} validates $\binom{j+i}{i} - \rascalNumber{j+i}{i}{i-1} = \binom{j}{i}$
+    \item \texttt{OneQPascalIdentity1[10, 20]} validates $\binom{2i+3+j}{i+2} - \rascalNumber{2i+3+j}{i+2}{i} = \oneQBinomial{i+2+j}{i+2}{i+2}$, see~\eqref{prop:row-column-difference-qbinomial}.
+    \item \texttt{OneQPascalIdentity2[10, 20]} validates $\binom{2t-1+j}{t} - \rascalNumber{2t-1+j}{t}{t-2} = \oneQBinomial{t+j}{t}{t}$
+\end{itemize}

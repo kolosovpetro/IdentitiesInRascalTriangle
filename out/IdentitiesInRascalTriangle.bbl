@@ -6,17 +6,29 @@
 \newblock {\em {The College Mathematics Journal}}, 41(5):393--395, 2010.
 \newblock \url {https://doi.org/10.4169/074683410X521991}.
 
-\bibitem{sloane1994pascal}
-{Sloane, N. J. A.}
-\newblock {Pascal's triangle read by rows. Entry A007318 in The On-Line
-  Encyclopedia of Integer Sequences}, 1994.
-\newblock \url {https://oeis.org/A007318}.
-
 \bibitem{sloane2002rascal}
 {Sloane, N. J. A.}
 \newblock {The Rascal triangle read by rows. Entry A077028 in The On-Line
   Encyclopedia of Integer Sequences}, 2002.
 \newblock \url {https://oeis.org/A077028}.
+
+\bibitem{gregory2022iterated_Aequationes}
+{Gregory, Jena M.}
+\newblock Iterated rascal triangles.
+\newblock {\em {Theses and Dissertations. 1050.}}, 2022.
+\newblock \url {https://scholarworks.utrgv.edu/etd/1050/}.
+
+\bibitem{kolosov2024iterated_R2}
+{Kolosov, Petro}.
+\newblock {Iterated rascal triangle R2, Entry A374378 in The On-Line
+  Encyclopedia of Integer Sequences}, 2024.
+\newblock \url {https://oeis.org/A374378}.
+
+\bibitem{kolosov2024iterated_R3}
+Petro Kolosov.
+\newblock Iterated rascal triangle r3, entry a374452 in the on-line
+  encyclopedia of integer sequences, 2024.
+\newblock \url {https://oeis.org/A374452}.
 
 \bibitem{gibbs2024two}
 Amelia Gibbs and Brian~K. Miceli.
@@ -37,10 +49,18 @@ Amelia Gibbs and Brian~K. Miceli.
 \newblock \url {https://doi.org/10.1007/s00010-023-00987-6}.
 
 \bibitem{andrews1999special}
-{Andrews, George E. and Askey, Richard and Roy, Ranjan and Roy, Ranjan and
-  Askey, Richard}.
-\newblock {\em {Special functions}}, volume~71.
-\newblock {Cambridge university press Cambridge}, 2000.
+George~E. Andrews, Richard Askey, and Ranjan Roy.
+\newblock {\em Special Functions}.
+\newblock Encyclopedia of Mathematics and its Applications. Cambridge
+  University Press, 1999.
+\newblock \url {https://doi.org/10.1017/CBO9781107325937}.
+
+\bibitem{graham1994concrete}
+{Graham, Ronald L. and Knuth, Donald E. and Patashnik, Oren}.
+\newblock {\em {Concrete mathematics: A foundation for computer science (second
+  edition)}}.
+\newblock {Addison-Wesley Publishing Company, Inc.}, 1994.
+\newblock \url {https://archive.org/details/concrete-mathematics}.
 
 \bibitem{sloane2009binomial}
 {Sloane, N. J. A.}
@@ -84,17 +104,12 @@ Amelia Gibbs and Brian~K. Miceli.
   Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A096940}.
 
-\bibitem{graham1994concrete}
-{Graham, Ronald L. and Knuth, Donald E. and Patashnik, Oren}.
-\newblock {\em {Concrete mathematics: a foundation for computer science}}.
-\newblock {Pearson Education India}, 1994.
-
 \bibitem{kolosov2024identities}
 {Kolosov, Petro}.
 \newblock {Identities in Iterated Rascal Triangles Mathematica programs}, 2024.
 \newblock \url {https://github.com/kolosovpetro/IdentitiesInRascalTriangle}.
 
-\bibitem{kolosov2024iterated}
+\bibitem{kolosov2024_mse_iterated}
 {Kolosov, Petro}.
 \newblock {"Iterated rascal triangle row sums" on MathStackExchange}, 2024.
 \newblock \url {https://math.stackexchange.com/q/4941336/463487}.

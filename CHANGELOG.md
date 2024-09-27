@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2024-09-28
+
+### Changed
+
+- Update readme
+- Update update bibliography
+- Add rascal triangle figures
+- Update abstract
+- Remove unnecessary latex commands
+- Remove unused files
+- Add OEIS sequences to bibliography
+- Introduction updated
+- Update in proposition proofs
+- Minor updates in row sums conjecture proof
+- Fix OEIS link for (1-6)-Pascal triangle
+- Add mathematica package documentation
+- Update conclusions
+- Update citation
+
 ## [1.1.4] - 2024-09-25
 
 ### Changed

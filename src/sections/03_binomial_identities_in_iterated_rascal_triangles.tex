@@ -1,5 +1,5 @@
 ﻿Prior we begin our discussion it is worth to introduce a few preliminary facts and statements.
-Define the iterated rascal number
+Define the iterated rascal number~\cite[eq. 3.2]{gregory2022iterated_Aequationes}
 \begin{definition}
     Iterated rascal number
     \begin{align}
@@ -41,22 +41,8 @@ Applying binomial coefficients symmetry principle we obtain
     \rascalNumber{n}{n-i+k}{i} = \binom{n}{n-i+k}
 \end{align*}
 \begin{proof}
-    Proof of proposition~\eqref{prop:rascal-binomial-identity-for-i}.
-    Consider the following relation between binomial coefficients and iterated rascal numbers,
-    for every $k \leq i$
-    \begin{align*}
-        \binom{n}{k} - \rascalNumber{n}{k}{i} = \sum_{m=0}^{k} \binom{n-k}{m} \binom{k}{k-m} - \sum_{m=0}^{i} \binom{n-k}{m} \binom{k}{k-m} = 0
-    \end{align*}
-    Yields
-    \begin{align*}
-        \sum_{m=k+1}^{i} \binom{n-k}{m} \binom{k}{m} = 0
-    \end{align*}
-    It is indeed true, because binomial coefficients $\binom{k}{m}$ are zero for each $m \geq k+1$.
-    So that for every $k \leq i$
-    \begin{align*}
-        \binom{n}{k} - \rascalNumber{n}{k}{i} = 0
-    \end{align*}
-    Therefore, the proposition~\eqref{prop:rascal-binomial-identity-for-i} is true.
+    Proof of proposition~\eqref{prop:rascal-binomial-identity-for-i}
+    is given by~\cite[proposition 6.0.1]{gregory2023iterated}.
 \end{proof}
 \begin{proposition}
     \label{prop:odd-row-proposition}
@@ -87,46 +73,60 @@ Taking $t=2i+1$ in~\eqref{eq:odd-row-identity} yields
 \begin{align*}
     \rascalNumber{t-n}{k}{t-i-1}= \binom{t-n}{k}
 \end{align*}
+Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
+\begin{equation}
+    \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
+    \label{eq:vandermonde-like-identity}
+\end{equation}
+In particular, given $n=0,1$ equation~\eqref{eq:vandermonde-like-identity}
+yields the following Vandermonde-like identities
+\begin{align*}
+    \binom{2i+1}{k} &= \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m} \\
+    \binom{2i}{k}   &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}
+\end{align*}
 \begin{proof}
     Proof of proposition~\eqref{prop:odd-row-proposition}.
     We have to prove that for every $i,k$
     \begin{equation*}
         \sum_{m=0}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} - \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
     \end{equation*}
-    For the case $k<i$ proof is the same as proof of proposition~\eqref{prop:rascal-binomial-identity-for-i}.
+    For the case $k<i$ proof is given by~\cite[proposition 6.0.1]{gregory2023iterated}.
     For the case $k=i$ proof is trivial.
     Thus, the remaining case is $k>i$ yields
-    \begin{equation*}
+    \begin{equation}
         \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
-    \end{equation*}
-    Introducing sum in $k$ to above equation
+        \label{eq:assumption-proposition-2-3}
+    \end{equation}
+    If~\eqref{eq:assumption-proposition-2-3} is true for each $k>i$, then its sum over $k$ should be zero as well.
+    Introducing sum in $k$ to~\eqref{eq:assumption-proposition-2-3} we get
     \begin{equation*}
-        \sum_{m=i+1}^{k} \sum_{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
+        \sum_{k} \sum_{m=i+1}^{k} \binom{2i+1-n-k}{m} \binom{k}{m} = 0
     \end{equation*}
-    Implies
+    The sum $\sum_{k} \binom{2i+1-n-k}{m} \binom{k}{m}$ appears to match the equation (5.26) in
+    Concrete mathematics~\cite[eq. 5.26]{graham1994concrete}
+    \begin{equation}
+        \sum_{k=0}^{\ell} \binom{\ell-k}{m} \binom{q+k}{n} = \binom{\ell+q+1}{m+n+1}
+        \label{eq:concrete-mathematics-5-26}
+    \end{equation}
+    Therefore,
+    \begin{align*}
+        \sum_{k} \binom{2i+1-n-k}{m} \binom{k}{m} = \binom{2i+2-n}{2m+1}
+    \end{align*}
+    Thus, our main assumption is equivalent to
     \begin{equation*}
-        \sum_{m=i+1}^{k} \binom{2i+2-n}{2m+1} = 0
+        \sum_{m=i+1}^{k} \sum_{k} \binom{2i+1-n-k}{m} \binom{k}{m} \equiv \sum_{m=i+1}^{k} \binom{2i+2-n}{2m+1}
     \end{equation*}
-    because $\sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}$, see equation (5.26) in~\cite{graham1994concrete}.
-    Substituting $m=i+1+m$ we get
+    Hence, we have to prove that
+    \begin{equation}
+        \sum_{m=i+1}^{k} \binom{2i+2-n}{2m+1} = 0\label{eq:assumption-proposition-2-3-updated}
+    \end{equation}
+    Substituting $m=i+1+m$ into~\eqref{eq:assumption-proposition-2-3-updated}, we get
     \begin{equation*}
         \sum_{m=0}^{k} \binom{2i+2-n}{2(i+1+m)+1} = \sum_{m=0}^{k} \binom{2i+2-n}{2i+3+2m} = 0
     \end{equation*}
     Which is indeed true because $\binom{2i+2-n}{2i+3+2m}=0$ for every $m,n \geq 0$.
+    Thus, the proposition~\eqref{eq:odd-row-identity} is true.
 \end{proof}
-Moreover, equation~\eqref{eq:odd-row-identity} gives Vandermonde-like identity
-\begin{proposition} (Vandermonde-like identity.)
-    \label{prop:vandermonde-like-identity}
-    \begin{equation*}
-        \binom{2i+1-n}{k} = \sum_{m=0}^{i} \binom{2i+1-n-k}{m} \binom{k}{m}
-    \end{equation*}
-\end{proposition}
-In particular, given $n=0,1$ proposition~\eqref{prop:vandermonde-like-identity}
-yields the following Vandermonde-like identities
-\begin{align*}
-    \binom{2i+1}{k} &= \sum_{m=0}^{i} \binom{2i+1-k}{m} \binom{k}{m} \\
-    \binom{2i}{k}   &= \sum_{m=0}^{i} \binom{2i-k}{m} \binom{k}{m}
-\end{align*}
 
 Now, let's smoothly switch our focus to finite differences of binomial coefficients and iterated rascal numbers.
 Considering the table of differences $\binom{n}{k}-\rascalNumber{n}{k}{3}$

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Remove unused files
 - Add OEIS sequences to bibliography
 - Introduction updated
+- Update in proposition proofs
 
 ## [1.1.4] - 2024-09-25
 

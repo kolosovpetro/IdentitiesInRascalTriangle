@@ -12,6 +12,24 @@
   Encyclopedia of Integer Sequences}, 2002.
 \newblock \url {https://oeis.org/A077028}.
 
+\bibitem{gregory2022iterated_Aequationes}
+{Gregory, Jena M.}
+\newblock Iterated rascal triangles.
+\newblock {\em {Theses and Dissertations. 1050.}}, 2022.
+\newblock \url {https://scholarworks.utrgv.edu/etd/1050/}.
+
+\bibitem{kolosov2024iterated_R2}
+{Kolosov, Petro}.
+\newblock {Iterated rascal triangle R2, Entry A374378 in The On-Line
+  Encyclopedia of Integer Sequences}, 2024.
+\newblock \url {https://oeis.org/A374378}.
+
+\bibitem{kolosov2024iterated_R3}
+Petro Kolosov.
+\newblock Iterated rascal triangle r3, entry a374452 in the on-line
+  encyclopedia of integer sequences, 2024.
+\newblock \url {https://oeis.org/A374452}.
+
 \bibitem{gibbs2024two}
 Amelia Gibbs and Brian~K. Miceli.
 \newblock {Two Combinatorial Interpretations of Rascal Numbers}.

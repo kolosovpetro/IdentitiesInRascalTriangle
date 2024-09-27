@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Update update bibliography
 - Add rascal triangle figures
 - Update abstract
+- Remove unnecessary latex commands
+- Remove unused files
 
 ## [1.1.4] - 2024-09-25
 

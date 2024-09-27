@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Fix OEIS link for (1-6)-Pascal triangle
 - Add mathematica package documentation
 - Update conclusions
+- Update citation
 
 ## [1.1.4] - 2024-09-25
 

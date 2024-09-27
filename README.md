@@ -4,7 +4,8 @@ In this manuscript, we explore new binomial identities within iterated Rascal tr
 revealing a connection between Vandermonde convolution and iterated Rascal numbers.
 We also provide new identities in terms of finite differences of iterated Rascal numbers and Binomial coefficients.
 Apart that, the manuscript provides a proof of the row sums conjecture in iterated Rascal triangles.
-Also, we establish and explore a connection between iterated Rascal triangles and $(1,q)$-Binomial coefficients.
+Also, we establish and explore a connection between iterated Rascal triangles and $(1,q)$-Binomial coefficients,
+showing related OEIS sequences.
 All result can be validated through the supplementary Mathematica programs.
 
 ## Build and run in Intellij IDEA

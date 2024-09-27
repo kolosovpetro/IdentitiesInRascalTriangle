@@ -57,10 +57,10 @@ PrintRowIdentity1[i_]:= Column[Table[RascalNumber[2i+1-j, k, i], {j, 0, 2i+1}, {
 RowIdentity2[t_, i_]:= Column[Table[RascalNumber[t-j, k, t-i-1]== Binomial[t-j, k], {j, 0, t}, {k, 0, t-j}]];
 RowIdentity3[i_]:= Column[Table[RascalNumber[2i+1-j, j, i]== Binomial[2i+1-j, j], {j, 0, i}]];
 RowIdentity4[t_, i_]:= Column[Table[RascalNumber[t-j, t-2j, t-i-1]== Binomial[t-j, t-2j], {j, 0, t-i-1}]];
-RowColumnDifferenceIdentity1[i_, rowNumber_]:= Column[Table[Binomial[n+2i, i] - RascalNumber[n+2i, i, i-1]== Binomial[n+i, i], {n, 0, rowNumber}]];
-RowColumnDifferenceIdentity2[i_, rowNumber_]:= Column[Table[Binomial[j+i, j] - RascalNumber[j+i, j, i-1]== Binomial[j, j-i], {j, 0, rowNumber}]];
-OneQPascalIdentity1[i_, rowNumber_]:= Column[Table[Binomial[2i+3+j, i+2] - RascalNumber[2i+3+j, i+2, i]== OneQBinomial[i+2+j, i+2, i+2], {j, 0, rowNumber}]];
-OneQPascalIdentity2[i_, rowNumber_]:= Column[Table[Binomial[2i-1+j, i] - RascalNumber[2i-1+j, i, i-2]== OneQBinomial[i+j, i, i], {j, 0, rowNumber}]];
+RowColumnDifferenceIdentity1[i_, rowNumber_]:= Table[Binomial[n+2i, i] - RascalNumber[n+2i, i, i-1]== Binomial[n+i, i], {n, 0, rowNumber}];
+RowColumnDifferenceIdentity2[i_, rowNumber_]:= Table[Binomial[j+i, j] - RascalNumber[j+i, j, i-1]== Binomial[j, j-i], {j, 0, rowNumber}];
+OneQPascalIdentity1[i_, rowNumber_]:= Table[Binomial[2i+3+j, i+2] - RascalNumber[2i+3+j, i+2, i]== OneQBinomial[i+2+j, i+2, i+2], {j, 0, rowNumber}];
+OneQPascalIdentity2[i_, rowNumber_]:= Table[Binomial[2i-1+j, i] - RascalNumber[2i-1+j, i, i-2]== OneQBinomial[i+j, i, i], {j, 0, rowNumber}];
 BinomialCoefficientAsPolynomial[n_, k_]:= Product[(n-i+1)/i, {i, 1, k}];
 BinomialRascalDifferenceColumn[i_, k_, size_] := Table[Binomial[n,k]-RascalNumber[n,k, i],{n, 2i+1, 2i+1 + size}];
 VandermondeIdentity[a_, b_, r_, upperLimit_] := Sum[Binomial[a, m] * Binomial[b, r-m], {m, 0, upperLimit}];
@@ -82,6 +82,9 @@ RascalInternalSum3[n_, i_]:=Sum[Sum[RascalNumber[k, k-2-t-1, i], {t, 0, k+2}], {
 End[ ]
 
 EndPackage[ ]
+
+
+
 
 
 

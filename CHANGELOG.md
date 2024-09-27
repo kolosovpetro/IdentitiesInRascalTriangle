@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Minor updates in row sums conjecture proof
 - Fix OEIS link for (1-6)-Pascal triangle
 - Add mathematica package documentation
+- Update conclusions
 
 ## [1.1.4] - 2024-09-25
 

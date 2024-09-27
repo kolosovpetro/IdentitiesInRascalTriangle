@@ -1,9 +1,11 @@
 # Identities in Iterated Rascal Triangles
 
-In this manuscript, we show new binomial identities in iterated rascal triangles,
-revealing a connection between Vandermonde convolution and iterated rascal numbers.
-We also present Vandermonde-like binomial identities.
-Furthermore, we establish a relation between iterated rascal triangle and $(1,q)$-binomial coefficients.
+In this manuscript, we explore new binomial identities within iterated Rascal triangles,
+revealing a connection between Vandermonde convolution and iterated Rascal numbers.
+We also provide new identities in terms of finite differences of iterated Rascal numbers and Binomial coefficients.
+Apart that, the manuscript provides a proof of the row sums conjecture in iterated Rascal triangles.
+Also, we establish and explore a connection between iterated Rascal triangles and $(1,q)$-Binomial coefficients.
+All result can be validated through the supplementary Mathematica programs.
 
 ## Build and run in Intellij IDEA
 

@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Add OEIS sequences to bibliography
 - Introduction updated
 - Update in proposition proofs
+- Minor updates in row sums conjecture proof
 
 ## [1.1.4] - 2024-09-25
 

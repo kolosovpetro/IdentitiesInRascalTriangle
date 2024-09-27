@@ -17,14 +17,15 @@ propose the following conjecture for row sums of iterated rascal triangles.
     \begin{equation}
         \sum_{m=0}^{i}  \sum_{k} \binom{4i+3-k}{m} \binom{k}{m} = 2^{4i+2}\label{eq:row_sums_conjecture_explicit}
     \end{equation}
-    In Concrete mathematics [\cite{graham1994concrete}, p.\ 169, eq (5.26)], Knuth et al.
-    provide the identity for the column sum of binomial coefficients multiplication
-    \begin{equation}
-        \label{eq:knuth-column-sum}
-        \sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}
-    \end{equation}
-    We can observe this pattern in the equation~\eqref{eq:row_sums_conjecture_explicit},
-    thus the sum $\sum_{k} \binom{4i+3-k}{m} \binom{k}{m}$ equals to
+%    In Concrete mathematics [\cite{graham1994concrete}, p.\ 169, eq (5.26)], Knuth et al.
+%    provide the identity for the column sum of binomial coefficients multiplication
+%    \begin{equation}
+%        \label{eq:knuth-column-sum}
+%        \sum_{k=0}^{l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}
+%    \end{equation}
+    We can observe the pattern~\eqref{eq:concrete-mathematics-5-26}
+    in equation~\eqref{eq:row_sums_conjecture_explicit}.
+    Thus, the sum $\sum_{k} \binom{4i+3-k}{m} \binom{k}{m}$ equals to
     \begin{align*}
         \sum_{k} \binom{4i+3-k}{m} \binom{k}{m} = \binom{4i+4}{2m+1}
     \end{align*}
@@ -34,7 +35,7 @@ propose the following conjecture for row sums of iterated rascal triangles.
     \end{align*}
     Note that
     \begin{align*}
-        \sum_{m=0}^{2i+1} \binom{4i+4}{2m+1} = 2^{4i+3}
+        \sum_{m=0}^{2i+1} \binom{4i+4}{2m+1}= \sum_{m=0}^{2i+1} \left[ \binom{4i+3}{2m+1} + \binom{4i+3}{2m} \right] = 2^{4i+3}
     \end{align*}
     So that
     \begin{align*}
@@ -48,7 +49,7 @@ propose the following conjecture for row sums of iterated rascal triangles.
         \sum_{k=0}^{4i+3} \rascalNumber{4i+3}{k}{i} &= 2^{4i+2}
     \end{align*}
 \end{proposition}
-In particular, equation~\eqref{eq:knuth-column-sum} assumes the following identity in
+In particular, equation~\eqref{eq:concrete-mathematics-5-26} assumes the following identity in
 row sums of iterated rascal triangles
 \begin{align*}
     \sum_{k=0}^n \rascalNumber{n}{k}{i} = \sum_{m=0}^{i} \binom{n+1}{2m+1}

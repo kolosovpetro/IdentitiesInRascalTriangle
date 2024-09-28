@@ -12,7 +12,7 @@
   Encyclopedia of Integer Sequences}, 2002.
 \newblock \url {https://oeis.org/A077028}.
 
-\bibitem{gregory2022iterated_Aequationes}
+\bibitem{gregory2022iterated_thesis}
 {Gregory, Jena M.}
 \newblock Iterated rascal triangles.
 \newblock {\em {Theses and Dissertations. 1050.}}, 2022.
@@ -42,7 +42,7 @@ Amelia Gibbs and Brian~K. Miceli.
 \newblock {\em {arXiv preprint arXiv:1907.11159}}, 2019.
 \newblock \url {https://arxiv.org/abs/1907.11159}.
 
-\bibitem{gregory2023iterated}
+\bibitem{gregory2023iterated_Aequationes}
 {Gregory, Jena and Kronholm, Brandt and White, Jacob}.
 \newblock Iterated rascal triangles.
 \newblock {\em {Aequationes mathematicae}}, pages 1--18, 2023.
@@ -97,12 +97,6 @@ George~E. Andrews, Richard Askey, and Ranjan Roy.
 \newblock {Seventh column (m=6) of (1,6)-Pascal triangle. Entry A097297 in The
   On-Line Encyclopedia of Integer Sequences}, 2004.
 \newblock \url {https://oeis.org/A097297}.
-
-\bibitem{sloane2004pascal16}
-{Sloane, N. J. A.}
-\newblock {Pascal (1,6) triangle. Entry A096940 in The On-Line Encyclopedia of
-  Integer Sequences}, 2004.
-\newblock \url {https://oeis.org/A096940}.
 
 \bibitem{kolosov2024identities}
 {Kolosov, Petro}.

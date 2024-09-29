@@ -1,4 +1,5 @@
 ﻿Jena Gregory, Brandt Kronholm & Jacob White, <a href="https://doi.org/10.1007/s00010-023-00987-6">Iterated rascal triangles</a>, Aequationes mathematicae, 2023.
+Jena Gregory, <a href="https://scholarworks.utrgv.edu/etd/1050/">Iterated rascal triangles</a>, Theses and Dissertations. 1050., The University of Texas Rio Grande Valley, 2022.
 Amelia Gibbs and Brian K. Miceli, <a href="https://arxiv.org/abs/2405.11045">Two Combinatorial Interpretations of Rascal Numbers</a>, arXiv:2405.11045 [math.CO], 2024.
 Philip K. Hotchkiss, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL23/Hotchkiss/hotchkiss4.html">Generalized Rascal Triangles</a>, Journal of Integer Sequences, Vol. 23, 2020.
 Philip K. Hotchkiss, <a href="https://arxiv.org/abs/1907.07749">Student Inquiry and the Rascal Triangle</a>, arXiv:1907.07749 [math.HO], 2019.
